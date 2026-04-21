@@ -4,7 +4,11 @@
 **Competition:** [AIMO Progress Prize 3](https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3)
 **Final result:** public 42/50, private 42/50; final rank 284
 **Submission:** [AIMO3 v7 - Winner Fork - Version 12](https://www.kaggle.com/code/sebastiangil00/aimo3-v7-winner-fork)
-**Reproducibility package:** [GitHub](https://github.com/SebastianGilPinzon/aimo3-writeup-public) (unit tests + `reproduce.sh`) · [Kaggle Dataset](https://www.kaggle.com/datasets/sebastiangil00/aimo3-writeup-artifacts)
+**Base model (HuggingFace):** [danielhanchen/gpt-oss-120b](https://huggingface.co/danielhanchen/gpt-oss-120b) (MXFP4, unmodified — no fine-tuning, no LoRA merge)
+**Kaggle-agnostic reproduction:** [Google Colab notebook](https://colab.research.google.com/github/SebastianGilPinzon/aimo3-writeup-public/blob/main/colab_inference.ipynb) (pulls the bare model from HuggingFace, runs the full pipeline)
+**Reproducibility package:** [GitHub](https://github.com/SebastianGilPinzon/aimo3-writeup-public) (unit tests + `reproduce.sh` + figure-generator script) · [Kaggle Dataset](https://www.kaggle.com/datasets/sebastiangil00/aimo3-writeup-artifacts)
+
+**Score basis:** private leaderboard (42/50), public leaderboard parity (42/50), rank 284 / 4138 teams.
 
 ---
 
