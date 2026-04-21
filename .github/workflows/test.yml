@@ -1,15 +1,18 @@
 name: substrate-trap-detection-tests
 
-# CI workflow: verifies that the three substrate-trap detection tests from
-# Section 6 of the writeup pass on every push. This is a reproducibility
-# receipt a reviewer can inspect without running anything locally.
+# CI workflow definition for the three substrate-trap detection tests
+# (Section 6 of the writeup). Trigger is workflow_dispatch (manual) only —
+# the file is included as documentation of the expected test environment
+# so a reviewer can inspect and optionally run; automatic runs are disabled
+# to avoid consuming the repo owner's Actions quota on a public archive.
+#
+# To run locally (any machine with Python 3.11+):
+#   pip install pytest numpy pandas
+#   pytest tests/ -v
+# Expected: 15 passed, 2 skipped (integration tests gated on H100).
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:  # allow manual runs
+  workflow_dispatch:
 
 jobs:
   tests:
