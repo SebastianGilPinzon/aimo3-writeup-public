@@ -28,6 +28,10 @@ We **explicitly do not claim** 42–44/50 is the achievable ceiling on this subs
 
 **In one sentence:** this paper is a tool, not a story — three unit tests, sixteen pre-committed falsifications, and a one-command reproduction, assembled so the next AIMO4 entrant does not re-learn what we paid ≈180 H100-hours to learn.
 
+![Figure 3. Submission timeline over the 22-day study: every departure from the day-5 baseline regressed or was neutral.](https://raw.githubusercontent.com/SebastianGilPinzon/aimo3-writeup-public/main/figures/fig3_submission_timeline.png)
+
+*Figure 3. Submission timeline over the 22-day study. The day-5 baseline (v7 Winner Fork, 42/50) is never exceeded; all 16 subsequent departures regress or are leaderboard-neutral. The final submission (day 22) is byte-identical to the day-5 baseline and scored public = private = 42/50.*
+
 ---
 
 ## 1. Introduction
@@ -272,6 +276,10 @@ Baseline row is the control; the remaining **sixteen rows are the sixteen falsif
 
 **Aggregate.** Under H₀ that each variant has Bernoulli(0.5) chance of Δ ≥ 0, the observed 16/16 non-positive outcomes yield `p = 2 × (0.5)^16 ≈ 3 × 10⁻⁵` (two-sided sign test); under Benjamini–Hochberg correction at FDR = 0.10 across the sixteen val-199 comparisons, `max q_BH = 1.00` (column above). Full per-row statistics — raw McNemar p, discordant-pair counts b and c, and BH-ordered thresholds — are in Appendix A1.
 
+![Figure 1. Falsification forest plot of sixteen controlled variants.](https://raw.githubusercontent.com/SebastianGilPinzon/aimo3-writeup-public/main/figures/fig1_ablation_forest.png)
+
+*Figure 1. Falsification forest plot: sixteen controlled variants vs. the baseline (42/50). Every variant lies at or below zero validation effect within 95% Wilson CI; none exceeds baseline under BH correction at q = 0.10. Color codes the family (Selection / Generation / Speed / Prompt / Multi-model); the annotation at the right of each point reports the single-shot leaderboard Δ when submitted.*
+
 ### 4.3 Family-level commentary
 
 **Selection family (7 variants: #1, #4, #5, #7, #8, #11, #13).** All failed. Common mechanism: the §2.6 entropy-weighted majority vote over K=8 rollouts on a base model with answer-level accuracy > 0.5 satisfies Condorcet–Jury Theorem [11, 12] conditions for majority optimality. Every selection variant we tested either (a) down-weighted the plurality cluster (Bayesian √-prior, code-output vote, length penalty) and therefore violated CJT, or (b) introduced a learned scoring function (RF classifier, PRM, evolutionary-GA-over-weights) whose validation gain failed to generalize under cross-validation.
@@ -317,6 +325,10 @@ The 10 official AIMO3 reference problems carry category labels {Algebra, Combina
 | Number Theory | 2 | 22/30 ≈ 0.73 | Problem 86e8e5 (Norwegian `3^(2025!)` modular) never solved; Problem 9c1c5f solved 22/30 |
 
 Note: problem 86e8e5 was **never** solved by our baseline across 30 runs, 12 thought-prefix variants, 12 code-fix retry variants, 12 K=12 variants, and 12 K=18 variants (194 attempts total). It is effectively out of scope for the inference-only gpt-oss-120b-MXFP4 substrate. See Appendix A4 for the full breakdown.
+
+![Figure 4. Baseline accuracy by problem category on the reference set.](https://raw.githubusercontent.com/SebastianGilPinzon/aimo3-writeup-public/main/figures/fig4_category_breakdown.png)
+
+*Figure 4. Baseline accuracy by problem category on the 10-problem reference set, 30 reference reproduction runs. Algebra and Combinatorics are near-ceiling (>90%); Geometry and Number Theory concentrate the remaining errors. The Norwegian-numbers problem 86e8e5 is an extreme outlier — never solved across 194 total attempts across baseline and variants.*
 
 ### 5.3 Why our inference-only approach plateaus at 42
 
@@ -382,7 +394,11 @@ The three substrate traps we document below share three properties: (i) the unde
 
 **Mechanism.** MXFP4 is the OCP Microscaling FP4 format [1]: per 32-element block, each element is stored as `E2M1` (1 sign bit, 2 exponent bits, 1 mantissa bit → 4 representable non-zero magnitudes per sign × 2 = 8 non-zero values + 0 = 9 representable values, with a shared E8M0 block scale). When we compute `W' = Q(W + BA)` for base weight `W`, LoRA factors `B` ∈ ℝ^(d×r), `A` ∈ ℝ^(r×k), and MXFP4 quantizer `Q`, the delta `BA` must have per-element magnitude exceeding roughly half the gap between adjacent representable values in the block to survive. For the adapter we tested, the median per-element `|BA|` was ≈ 2⁻⁶ of the per-block scale `s`, while the MXFP4 gap between adjacent E2M1 values is ≈ 2⁻¹ `s`. The delta collapsed into the same representable bin as `W`, producing `W' ≈ W` to within quantization noise — no adapter learning survives the re-quantization. This is the AIMO3 manifestation of the general merge-then-quantize incompatibility addressed by QA-LoRA [14] (which jointly optimizes adapter and quantization rather than merging post-hoc).
 
-**Detection script: [`tests/test_lora_mxfp4_collapse.py`].** Given a `(base_W, lora_B, lora_A)` triple and the MXFP4 block configuration, the test: (i) computes `W_merged = base_W + lora_B @ lora_A`, (ii) applies the MXFP4 quantizer `Q` to both `base_W` and `W_merged`, (iii) computes `||Q(W_merged) - Q(base_W)||_F / ||Q(base_W)||_F`, (iv) asserts that the Frobenius-norm ratio exceeds `1e-3` (a conservative threshold for non-collapsed deltas). If the ratio falls below `1e-3`, the adapter's contribution has been erased by re-quantization. Runtime: ≈10 seconds, CPU-only (no H100 needed). Status: written; self-tests green on synthetic delta.
+**Detection script: [`tests/test_lora_mxfp4_collapse.py`].** Given a `(base_W, lora_B, lora_A)` triple and the MXFP4 block configuration, the test: (i) computes `W_merged = base_W + lora_B @ lora_A`, (ii) applies the MXFP4 quantizer `Q` to both `base_W` and `W_merged`, (iii) computes the signal-to-noise ratio `||Q(W_merged) - Q(base_W)|| / ||Q(base_W) - base_W||`, (iv) asserts collapse when `SNR ≤ 1` (adapter signal at or below quantization noise floor). If `SNR ≤ 1`, the adapter's contribution is indistinguishable from re-quantization noise. Runtime: ≈10 seconds, CPU-only (no H100 needed). Status: green (4/4 CPU tests pass).
+
+![Figure 2. MXFP4 re-quantization collapse boundary for LoRA adapters.](https://raw.githubusercontent.com/SebastianGilPinzon/aimo3-writeup-public/main/figures/fig2_mxfp4_collapse_boundary.png)
+
+*Figure 2. MXFP4 re-quantization collapse boundary for LoRA adapters. Signal-to-noise ratio on the y-axis (log scale) as a function of per-element LoRA delta magnitude on the x-axis. Below SNR = 1 (dashed line) — delta magnitudes ≲ 2% of the base block scale — the merge-then-requantize operation erases the adapter entirely. The huikang AIMO2 adapter we tested (v13 submission) had per-element delta magnitude ≈ 2⁻⁶ of base scale and fell well within the collapsed regime.*
 
 ### 6.3 Sqrt-prior Bayesian vote re-weighting: anti-Condorcet inversion on a calibrated base
 
