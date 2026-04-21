@@ -1,0 +1,71 @@
+name: substrate-trap-detection-tests
+
+# CI workflow: verifies that the three substrate-trap detection tests from
+# Section 6 of the writeup pass on every push. This is a reproducibility
+# receipt a reviewer can inspect without running anything locally.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # allow manual runs
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest numpy pandas
+
+      - name: Show versions
+        run: |
+          python --version
+          python -c "import numpy; print('numpy', numpy.__version__)"
+          python -c "import pandas; print('pandas', pandas.__version__)"
+          python -c "import pytest; print('pytest', pytest.__version__)"
+
+      - name: Run substrate-trap detection tests
+        run: pytest tests/ -v
+
+      - name: Verify reproducibility artifacts exist
+        run: |
+          test -f reproducibility/reproduce.sh || (echo "reproduce.sh missing" && exit 1)
+          test -f reproducibility/verify.py || (echo "verify.py missing" && exit 1)
+          test -f reproducibility/environment.lock || (echo "environment.lock missing" && exit 1)
+          test -f reproducibility/expected_hashes.json || (echo "expected_hashes.json missing" && exit 1)
+          test -f reproducibility/local_gateway.py || (echo "local_gateway.py missing" && exit 1)
+          test -f submission/notebook.py || (echo "notebook.py missing" && exit 1)
+          test -f data/reference.csv || (echo "reference.csv missing" && exit 1)
+          test -f data/val_199.csv || (echo "val_199.csv missing" && exit 1)
+          test -s data/val_199.csv
+          echo "OK: all reproducibility artifacts present"
+
+      - name: Validate JSON / CSV schema
+        run: |
+          python -c "
+          import json, pandas as pd
+          eh = json.load(open('reproducibility/expected_hashes.json'))
+          assert eh['n_reference_runs'] == 30
+          assert len(eh['per_problem']) == 10
+          ref = pd.read_csv('data/reference.csv')
+          assert len(ref) >= 10
+          val = pd.read_csv('data/val_199.csv')
+          assert len(val) >= 190
+          assert val['answer'].between(0, 99999).all()
+          print('OK: schema validation passed')
+          "

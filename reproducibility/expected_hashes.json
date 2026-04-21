@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "description": "Per-problem empirical answer distributions from 30 stochastic reference reproduction runs of submission 'sebastiangil00/aimo3-v7-winner-fork Version 12' against the 10 official AIMO3 reference problems. Values are the fraction of the 30 runs that produced a given answer.",
+  "n_reference_runs": 30,
+  "problems_source": "data/reference.csv (official AIMO3 reference set)",
+  "generation_date": "2026-04-17",
+  "notes": "Used by verify.py --mode stochastic to assess whether a re-implementation's answers lie in the support of our observed distribution. min_support threshold of 0.05 is applied by default, requiring an answer to appear in at least 5% (>=2 of 30) of reference runs.",
+  "per_problem": {
+    "0e644e": {"336": 0.97, "337": 0.03},
+    "26de63": {"32951": 1.00},
+    "424e18": {"21818": 0.97, "21819": 0.03},
+    "42d360": {"32193": 0.93, "32194": 0.07},
+    "641659": {"57447": 0.80, "57448": 0.10, "57450": 0.10},
+    "92ba6a": {"50": 1.00},
+    "9c1c5f": {"580": 0.73, "579": 0.13, "581": 0.07, "578": 0.07},
+    "a295e9": {"520": 0.67, "521": 0.13, "519": 0.10, "522": 0.10},
+    "86e8e5": {"41754": 0.50, "13657": 0.33, "99427": 0.10, "41755": 0.07},
+    "dd7f5e": {"160": 1.00}
+  }
+}

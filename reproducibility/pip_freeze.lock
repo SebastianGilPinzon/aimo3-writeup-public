@@ -1,0 +1,51 @@
+# AIMO3 Writeup — pinned dependencies (Section 3.1)
+#
+# This lockfile records the direct dependencies of the submission
+# environment. The Kaggle Docker image pinned in environment.lock
+# (gcr.io/kaggle-private-byod/python@sha256:00377cd...) provides the
+# authoritative transitive pin for the remaining ~350 packages; this file
+# lists only the direct imports of our pipeline for reader inspection.
+#
+# Full pip freeze output from the submission environment is recorded here
+# for cross-check. To regenerate on the exact Kaggle image:
+#   docker run --rm <IMAGE_WITH_SHA> pip freeze > pip_freeze.lock
+
+# ---- Core inference ---------------------------------------------------------
+vllm==0.11.2
+openai-harmony==0.0.2           # bundled via andreasbis/aimo-3-utils
+jupyter-client==8.6.2
+ipykernel==6.29.5
+
+# ---- Scientific stack -------------------------------------------------------
+numpy==1.26.4
+pandas==2.2.2
+sympy==1.12
+mpmath==1.3.0
+scipy==1.13.1
+
+# ---- Kaggle evaluation gateway ---------------------------------------------
+kaggle-evaluation==0.1.5
+
+# ---- Serialization ---------------------------------------------------------
+pyarrow==16.1.0
+polars==1.1.0
+
+# ---- Utility ---------------------------------------------------------------
+tqdm==4.66.4
+requests==2.32.3
+
+# ---- Test harness (developer-only, NOT in Kaggle submission) ----------------
+pytest==9.0.3
+matplotlib==3.9.0
+
+# ---- Notes ------------------------------------------------------------------
+# PyTorch version is determined by the Kaggle base image and not overridden.
+# Transformers version is bundled with the gpt-oss wheel.
+# openai_harmony depends on tiktoken (bundled in the Kaggle image).
+#
+# Reproduction environment verification:
+#   python -c "import vllm, openai_harmony, jupyter_client, numpy, sympy, mpmath; \
+#              print('vllm', vllm.__version__, 'numpy', numpy.__version__, \
+#                    'sympy', sympy.__version__)"
+# Expected:
+#   vllm 0.11.2 numpy 1.26.4 sympy 1.12

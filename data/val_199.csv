@@ -1,0 +1,599 @@
+id,problem,answer,category
+673b29,"An explorer is challenging to pass through a maze composed of 3033 rows and 3032 columns of squares. The rules of the maze are as follows: In all the middle rows (that is, from the 2nd row to the 3032nd row), there is one invisible teleportation gate hidden in each row, and there are no multiple invisible teleportation gates in the same column. The explorer starts from any position in the 1st row. Each time, he can move one square up, down, left or right, and it is allowed to pass through the explored areas repeatedly. If the explorer touches a teleportation gate, he will immediately return to the starting point and start the next attempt. However, the explorer will mark the position of that teleportation gate. If the explorer reaches any position in the 3033rd row, he will directly pass the maze. It is known that the explorer can remember the positions of all the discovered teleportation gates. Please construct a general strategy so that no matter how the teleportation gates are distributed, the explorer will definitely pass the maze in the \(k\)th attempt in the worst-case scenario. Find the minimum possible value of \(k\).",3,combinatorics
+3cf8bf,For a positive integer \(n\geq2\)，define \(n - 1\) by \(n-1\) matrix \(M_n(\lambda)=\begin{pmatrix}6-\lambda&-\lambda&-\lambda&\cdots&-\lambda\\-\lambda&24-\lambda&-\lambda&\cdots&-\lambda\\-\lambda&-\lambda&60-\lambda&\cdots&-\lambda\\\vdots&\vdots&\vdots&\vdots&\vdots\\-\lambda&-\lambda&-\lambda&\cdots&n^{3}-n-\lambda\end{pmatrix}\). Let \(\lambda_n\)be the maximal \(\lambda\) such that \(\det(M_n(\lambda)) = 0\). Find \(I=\limsup_{n\rightarrow\infty}\lambda_n\).,4,algebra
+06788e,"A sequence of real numbers \(\{a_n\}\) satisfies that：\(a_{n + 1}=2^n-7a_n，n = 0,1,2,\cdots\). Find the minimal possible value of \(\frac{1}{a_0}\) such that \(a_{n + 1}>a_n\) for any positive integer \(n\).",9,algebra
+c9a608,"A frog starts from 0 and makes 2047 jumps. This process satisfies the following conditions: (1) The frog will jump to each point in the set \(\{1, 2, 3,\cdots,2047\}\) exactly once without repetition or omission. (2) The length of each jump of the frog is a power of 2, and the direction can be either to the left or to the right. Let \(T\) be the sum of the reciprocals of the lengths of the frog's jumps. Find the minimum value of \(T\).",11,combinatorics
+170362,"For any positive integer \(n\geq2\), we define \(f(n)\) as the last non-zero digit of \(n!\) in the decimal system. It is known that \(k\) is the fifth smallest positive integer that satisfies the following condition: for any positive integer \(n\geq2\), \(f(kn) = f(n)\) always holds. How many digits does \(k\) have in the decimal system?",12,number_theory
+b286eb,"How many integers \(k\in[2,18676]\) are there such that the number of positive integer triples \((n,a,b)\) satisfying the following conditions is finite: \(n\) is odd, \(\gcd(a,b) = 1\), \(a + b=k\), and \(n\mid a^{n}+b^{n}\)?",14,number_theory
+ddba8e,"There are 60 real numbers \(a_1, a_2, \cdots, a_{60}\) satisfying \(a_1 + a_2+\cdots + a_{60}=0\), and for any \(1\leqslant i\leqslant 60\), \(\vert a_i - a_{i + 1}\vert\leqslant 1\) (\(a_{61}=a_1\)). If \(a = a_{12}\), \(b = a_{24}\), \(c = a_{36}\), \(d = a_{48}\), \(e = a_{60}\). Find the maximum value of \(a + b + c + d+e\) .",15,algebra
+21fb4e,"At least how many black stones should be placed on a 9×9 square grid board to ensure that there is no possibility for the white to make a five-in-a-row? (which means there are no five consecutive empty squares in a row, in a column, or five consecutive empty squares along a diagonal among the remaining empty squares). Note that empty square here means a square with no black stone in it and each square can only be filled with no more than 1 black stone.",16,combinatorics
+581a58,"\(n\) students take an exam. There are a total of 6 questions in the exam, and each question has three options. After the exam, it is statistically found that for any two students, the number of questions with the same answers between them is either 0 or 2. What is the maximum value of \(n\)?",18,combinatorics
+3070ea,"Let \(N\) be the minimal positive integer which can not be represented as \(\sum_{i = 1}^{7263}(- 1)^{a_{i}}\times2^{b_{i}}\) where \(a_{i},b_{i}(i = 1,2,\cdots,7263)\) are non-negative integers. Find \(N \mod 29\).",23,number_theory
+a824c1,"How many squares at least should be marked on a \(13\times13\) chessboard such that for any placement of a bishop on the chessboard, the bishop can threaten at least one of the marked squares? (A bishop can threaten the squares on the same diagonal line, and if a bishop is placed on a marked square, it is also considered that the square is threatened.)",13,combinatorics
+ebac93,"Find the largest positive number \(C\)，such that for any six positive integers \(x_1, x_2, \ldots, x_6\)，we have\( \left(x_1+\cdots+x_6\right)^3  \geq C \operatorname{gcd}\left(x_1, x_2, \ldots, x_6\right) \cdot \sum_{i=1}^6 \left(\operatorname{gcd}\left(x_i, x_{i+1}\right) \cdot \operatorname{lcm}\left(x_{i+1}, x_{i+2}\right)\right) \)
+where \(x_{7}=x_1, x_{8}=x_2\).",27,number_theory
+485d27,"Place 471 coins in the squares of an \(n\times n\) board where each block can hold 1 coin, multiple coins, or no coin at all, such that the difference in the number of coins between any two adjacent squares (squares that share a common side) is 1. Find the maximum value of \(n\) for which such an arrangement is possible.",29,combinatorics
+ee08d7,"Find the maximum number of ""kings"" that can be placed on a \(10\times10\) chessboard, such that each ""king"" can exactly attack ONE other ""king"" (a ""king"" can attack the chess piece in the square that shares a common vertex with the square it is in).",40,combinatorics
+414a5b,"Kevin throws three fair dice numbered from 1 to 6. Then he observes the results of the first throw of the three dice. From these three dice, he can choose \(n\), where \(0\leq n\leq3\) dice to re-throw once. After that, the operation ends. Kevin's goal is to maximize the probability that the sum of the numbers on the final three dice is 7, and Kevin is smart enough. Let the probability when \(n = 2\) be \(p\). What is the value of \(216\times p\)?",42,combinatorics
+3980cd,"Let \(m\) be the maximal positive integer such that there exists complex numbers \(r_1,\cdots,r_{645}\), which are not all zeros, satisfying \(\prod_{k = 1}^{645}(r_k + 1)=\prod_{k = 1}^{645}(r_k^2+1)=\cdots=\prod_{k = 1}^{645}(r_k^m + 1)=1\). Find \(m \mod 848\).",46,algebra
+c19295,"Given a \(15\times15\) chessboard, there are \(n\) pieces placed on \(n\) individual squares respectively. For each piece, a \(5\times5\) square with its sides parallel to the boundaries of the chessboard is drawn with the piece located as the center, and this square is called the range of the piece. If there is exactly one other piece within the range of each piece, find the maximum value of \(n\).",48,combinatorics
+0c55f3,"It is known that one plane divides the space (three-dimensional) into two parts, two parallel planes divide the space into three parts, and two intersecting planes divide the space into four parts; Consider the planes where the six faces of the cube \(ABCD - A_1B_1C_1D_1\) are located, and the planes where the four faces of the tetrahedron \(BA_1C_1D_1\) are located. How many parts does these ten planes divide the space into?",64,geometry
+bad5bf,"Let \(S = \{\frac{2y - 3}{2x - 1} \mid \min\{\vert x - 2\vert,\vert x + 2\vert\}+\vert y\vert\leqslant1\}\), Assume the length of the set \(S = \frac{m}{p}\) where \(m\) and \(p\) are coprimes, Find \(m+p\).",67,algebra
+effa13,"Given that the quadrilateral inscribed in the sphere is an isosceles trapezoid \(ABCD\), where \(AB = 2\), \(BC = AD = 3\), \(CD = 4\), and the center of the sphere is \(O\). Points \(E\) and \(F\) are respectively on the sides \(AD\) and \(BC\), and the minimum value of \(\overrightarrow{OE}\cdot\overrightarrow{OF}\) is \(- 2\). Find the minimum interger which is greater than the volume of the sphere.",70,geometry
+6c042a,"Suppose there is a necklace composed of beads of two colors, red and blue, with a total of 16 beads. And the necklace can be freely rotated and flipped (that is, the cases regarded as the same necklace need to be combined for counting). If on this necklace, there are neither three consecutive blue beads nor three consecutive red beads, how many different necklaces that meet the above requirements are there?",88,combinatorics
+9bfdb0,"Let the plane be tiled with an infinite number of unit squares arranged in a checkerboard pattern. If another unit square falls randomly on this plane, and its position and orientation are independent of the tiling of the checkerboard, let \(p\) be the probability that this unit square does not cover any vertex of the squares in the checkerboard. Find \(\lfloor 1000\cdot p\rfloor\) (the result of rounding down the product of \(1000\) and \(p\)).",90,geometry
+cbbc1b,"Real numbers \(x_1 \leq x_2 \leq \ldots \leq x_9\) such that \(\sum_{i=1}^9 x_i=1\). Find the maximum value of 
+\(
+\frac{\left(\sum_{i=1}^9\left|x_i-x_{5}\right|\right)^2 \cdot \sum_{1 \leq i<j \leq 9}\left(x_i-x_j\right)^2}{\left(\sum_{i=1}^9 x_i^2\right)^3}
+\).",96,algebra
+26bee3,"In a square grid table composed of \(16\times16\) unit squares with side length \(1\), \(n\) squares are selected. In each of the selected squares, a directed diagonal is drawn. It is known that for any two directed diagonals, either the end point of one diagonal is the same as the starting point of the other diagonal, or the distance between the two end points is at least \(2\). Find the maximum value of \(n\).",108,combinatorics
+fe4669,"A set of 2025 squares in a \(2025\times2048\) chessboard is called a generalized diagonal (simply called a diagonal for short) if any two of these squares are neither in the same row nor in the same column. Some squares in the \(2025\times2048\) chessboard are colored red such that there are at most 128 red squares in each row and each column. Try to find the minimum value of the positive integer \(n\) such that for any coloring method, we can always find \(n\) diagonals on the chessboard, such that all the red squares are on these diagonals.",128,combinatorics
+ef8a39,"Let \(a_1,a_2,\cdots\) be an infinite sequence of positive integers with \(a_1 = 1\), such that\(a_n\mid a_k + a_{k + 1}+\cdots + a_{k + n - 1}\)  for all positive integers \(k\) and \(n\). Let \(N\) be the maximal possible value of \(a_{5652}\), find the \(N \mod 776\).",143,number_theory
+19570e,"The 30 edges of a regular icosahedron are distinguished by labeling them 1, 2, ..., 30. How many different ways are there to paint each edge red, white, or blue such that each of the 20 triangular faces of the icosahedron has two edges of the same color and a third edge of a different color? Find the answer mod 1000.",224,combinatorics
+14f73f,"Assume a positive integer \(N\) can be represented as summation of \(k\) consecutive positive integers, i.e. \(N = a + (a + 1) + (a + 2) + \cdots + (a + k - 1)\), for \(k = 1559\), and can not be represented as summation of \(k\) consecutive positive integers for any other \(k > 1\). Consider all positive integers \(N\) with the aforementioned property, find the minimal positive integer \(a\) in all of the representations of all \(N\).",245,number_theory
+d5054a,"Ten points are randomly and independently generated with a uniform distribution inside a circle. Denote the probability that the center of the circle lies outside the convex hull of these ten points as \(p = \frac{m}{n}\), where \(m\) and \(n\) are coprime. Find \(n - m\).",251,geometry
+d6f389,"A coin is randomly drawn from a population. The probability that this coin shows heads when tossed once is \(p\), and \(p\) follows a uniform distribution \(U[0,1]\). Subsequently, this randomly drawn coin is tossed repeatedly for a total of 256 times. Let \(p = \frac{m}{n}\) be probability of getting exactly 128 heads where \(m\) and \(n\) are positive coprime integers. Find \(m+n\).",258,combinatorics
+29714f,"There is a function \( g: \mathbb{N} \times \mathbb{N} \to \mathbb{N} \) such that \( g(0,0) = 0 \), and for any \( x, y \in \mathbb{N} \), there exists \( n \in \mathbb{N} \) such that
+\[\{g(x,y), g(x,y+1), g(x+1,y)\} = \{n, n+1, n+2\}.\]
+Let \(S\) be the set of all possible values of \( g(4000, 4036) \). Find the 100-th smallest value of \(S\).",297,combinatorics
+72a159,"Nine balls numbered \(1, 2,\cdots,9\) are randomly placed on the nine equally-divided points of a circle, with one ball at each point. Let \(S\) be the sum of the absolute values of the differences between the numbers of all adjacent pairs of balls on the circle. Find the reciprocal of the probability of the placement method that makes \(S\) reach the minimum value. (Note: If a certain placement method can coincide with another placement method after rotation or mirror reflection, they are considered the same placement method.)",315,combinatorics
+12a146,"For a positive integer \(n\), sort all the \(l\) positive factors of \(n\) as \(d_1, d_2, \cdots, d_l\) from smallest to largest. If there exist positive integers \(i, j \in\{1,2, \cdots, l\}\), such that \(d_8^2+d_i^2=d_j^2\), find the minimal value of \(n\)．",360,number_theory
+23586c,"Bob has a convex 735-gon in the plane and
+wishes to construct the centroid of its vertices. He has no standard ruler or compass, but
+he does have a device with which he can dissect the segment between two given points
+into m equal parts. For how many \(m \in [9, 81256]\) can Bob necessarily accomplish his task?",773,geometry
+ac93ce,"For two sets \(A\) and \(B\), the set \(A\Delta B=\{x|x\in A\text{ and }x\notin B\}\cup\{x|x\in B\text{ and }x\notin A\}\) is defined. Let \(A_1,A_2,\cdots,A_{2^{312}}\) be all the subsets of \(S = \{1,2,\cdots,312\}\), and \(M\) be a number table with \(2^{312}\) rows and \(2^{312}\) columns. For any \(i,j\in\{1,2,\cdots,2^{312}\}\), the sum of all the elements in the set \(A_i\Delta A_j\) (it is agreed that the sum of the elements of the empty set is \(0\)) is filled in the position of the \(i\)-th row and \(j\)-th column of the number table \(M\). Find the remainder when the sum of all the numbers in the number table \(M\) is divided by \(1000\).",424,combinatorics
+e69f18,"Real numbers \(x_1,x_2,\cdots,x_n\) satisfy \(|x_1|+|x_2|+\cdots+|x_{3526}| = 1\). Let \(M\) be the maximal possible value of \(\frac{1}{|x_1|+|x_1 - x_2|+|x_1 + x_2 - x_3|+\cdots+|x_1 + x_2+\cdots+x_{3525}-x_{3526}|}\). Find \(M \mod 1000\).",432,algebra
+c4d8d5,"Given \(x_1^2+y_1^2+z_1^2=1,6 x_2+3 y_2+2 z_2=12\), where \(x_1, y_1, z_1 \in \mathbb{R}, x_2, y_2, z_2 \in(0,+\infty)\). Let the minimal value of \(\max \left\{\left|x_2-x_1\right|,\left|y_2-y_1\right|,\left|z_2-z_1\right|\right\}\) be \(x\), Find the largest integer which is smaller than \(1000 \cdot x\).",454,geometry
+cf3142,"A \(12\times12\) matrix \(A\) satisfies that each row has exactly \(6\) elements equal to \(1\) and \(6\) elements equal to \(0\). Then, how many matrices \(A\) are there such that \(A^{2}+6A\) is a matrix with all elements equal to \(6\)?",462,combinatorics
+443a0e,"Let \(\mathbb{F}_{2027}\) be the field of residues modulo \(2027\). Let \(W\) be the smallest set of polynomials with coefficients in \(\mathbb{F}_{2027}\) such that the polynomials \(x+1\) and \(x^{2025}+x^{2024}+\cdots+x^2+2x+1\) are in \(W\), and for any polynomials \(h_1(x)\) and \(h_2(x)\) in \(W\), the polynomial \(r(x)\), which is the remainder of \(h_1(h_2(x))\) modulo \(x^p-x\) is also in \(W\). Let \(N\) be the number of polynomials in \(W\). How many consecutive zeros are there at the end of the decimal representation of \(N\)?",505,algebra
+d75200,"For every real number \(x\), let \(f(x)=\sum_{n\in S_x}\frac{1}{2^n}\), where \(S_x\) is the set of positive integers \(n\) such that\(\lfloor nx\rfloor\) is even. Let\(L_{max}\) be the largest real number such that \(f(x)\geq L\) for all \(x\in[0, 1)\). Find the largest integer which is smaller than \(1000 \cdot L_{max}\).",571,number_theory
+53de2d,"Consider a pair of integers \(a, b\) such as \(a^2+b^2 \leq 19\), and there exists real numbers \(x, y\) such that \(\frac{a}{\sqrt{x}}+\frac{2}{y+3 x}=\frac{b}{\sqrt{y}}-\frac{2}{y+3 x}=1\)．Find the square of the numbers of ordered pair \((a, b)\) satisfying the aforementioned property.",576,algebra
+777281,"Find the minimal number \(C\) satisfying：
+\[
+\sum_{0 \leq i,j \leq n} 4^{i+j+1} C_{i+j}^i x_i x_j+\sum_{0 \leq i \leq n} x_i \geq -\frac{1}{4144}C 
+\]
+for all positive integers \(n\) and \(x_0, x_1, \cdots, x_n \in \mathbb{R}\).",592,algebra
+676ce2,"Consider positive integers \(a_1<a_2<\cdots<a_{38}\) satisfying \(a_1+a_2+\cdots+a_{38}=1997\). Let \(b_k=\min \left\{a_1+a_2+\cdots+a_k, a_{k+1}+a_{k+2}+\cdots+a_{38}\right\}\). Let \(S=\max \left\{b_1, b_2, \cdots, b_{37}\right\}\). Find the minimal value of \(S\)．",666,combinatorics
+ba89f9,"Arrange the numbers \(1, 2,\dots,333^{2}\) into a \(333\times333\) number table, with each number appearing exactly once. Calculate the ratio of the larger number to the smaller number for every pair of numbers in the same row or the same column. The smallest value among these \(333^{2}\times332\) ratios is called the characteristic value of this number table. Let the maximum possible value of the characteristic value be \(\lambda=\frac{\alpha}{\beta}\), where \(\alpha\) and \(\beta\) are coprime. Find \(\alpha + \beta\).",667,combinatorics
+a240b5,"Let the radius of the circle \(O\) be \(r = 1\), and \(M\) be a point on the edges of regular dodecagon (12-sided polygon) inscribed in the circle \(O\). \(E\) and \(F\) are a pair of diametrically opposite points on the circle \(O\). Let \(S=\min\{\overrightarrow{MF}\cdot\overrightarrow{ME}\}\). Find the value of \(\lceil- 10000\times S\rceil\).",670,geometry
+6c1fb9,"For a finite non-empty set \(X\) of real numbers, denote the number of elements in \(X\) as \(\vert X\vert\), and \(f(X)=\frac{1}{\vert X\vert}(\sum_{a\in X}a)\). The pair of sets \((A,B)\) satisfies \(A\cup B = \{1, 2, \cdots, 200\}\), \(A\cap B=\varnothing\), and \(1\leq\vert A\vert\leq198\) and \(2\leq\vert B\vert\leq199\). For any \(p\in B\), let \(A_p = A\cup\{p\}\) and \(B_p=\{x\vert x\in B,x\neq p\}\). For all \((A,B)\) that satisfy the above conditions and \(p\in B\), find the maximum value of \((f(A_p)-f(A))\cdot(f(B_p) - f(B))\). If it is in fraction form, calculate the sum of the numerator and the denominator of the irreducible fraction.",724,combinatorics
+481584,There is a sphere with radius \(\sqrt{6}/36\) moving freely inside a tetrahedron with side length 1. Let \(V\) be the volume of the reachable regions of the center of the sphere. Find  \(\lfloor 1/V^2 \rfloor\).,820,geometry
+2e2ccb,"Find the minimal positive integer \(n \geqslant 866\) satisfying: there exists a bijection \(f\) from \(\{1,\cdots,n\}\) to itself, such that for any \(x,y\in\{1,\cdots,n\}\), if \(n\) divides \(866x - y\) then \((n + 1)\mid f(x)^{866} - f(y)\).",876,number_theory
+3b88b3,"Given non-negative real numbers \(x, y, z\) satisfying \(\sqrt{x^2+y^2}+z=1\), for positive real number \(k\), define \(f(k)\) as the maximal value of \(4(xy+kxz)\). Find the largest integer no more than \(f^2(1)+3f^2(2)+8f^2(3)+15f^2(4)+24f^2(5)\).",982,algebra
+3e5546,"Find the minimal constant \(k\), such that for any positive real numbers \(x,y,z\), the inequality \(\frac{x}{\sqrt{x+y}}+\frac{y}{\sqrt{y+z}}+\frac{z}{\sqrt{z+x}}\leq \frac{k}{1000}\sqrt{x+y+z}\) always hold true.",1250,algebra
+fca51a,"Given 1893 people and 66 kinds of shapes. Each person holds one cookie of each of the 66 shapes, and the total mass of these 66 cookies is 1 (the mass of each cookie is a positive real number; the masses of cookies of the same shape held by different people can be different). Let \(C\) be the smallest positive real number such that it is always possible to select one cookie from each person, satisfying that for each kind of shape among the selected cookies, the total mass of cookies of this shape does not exceed \(C\). Suppose \(C\) is written in the form of the simplest fraction \(\frac{q}{p}\), find the value of \(p + q\).",95,combinatorics
+f8c854,"Let \(S = \{1,2,\cdots,6172\}\) and \(M\) is the number of functions \(f:S\rightarrow S\) that satisfy the following conditions: 
+(1) \(f\) is a one-to-one mapping. 
+(2) For any positive integer \(a\), (\(1\leq a\leq6172\)), \(f(a)+f^{-1}(a)=6173\) holds, where \(f^{-1}\) is the inverse function of \(f\). 
+
+Find the value of \(k\) where \(M=2^{k}\).",1543,combinatorics
+17fb59,"Find the smallest positive integer \(t\), such that for any real numbers \(a_1, a_2, \cdots, a_{4467}\), the inequality \(\max(|a_1|, |a_2|, \cdots, |a_{4467}|) \leq t \cdot \max(|a_1 + a_2|, |a_2 + a_3|, \cdots, |a_{4466} + a_{4467}|, |a_{4467} + a_1|)\) always hold true.",2234,algebra
+27cec1,"\(x_1,x_2,\dots,x_{2025}\) are positive real numbers. Let \(M\) be the minimal value of \(\max\{x_1,\frac{1}{x_1}+x_2,\dots,\frac{1}{x_{2024}}+x_{2025},\frac{1}{x_{2025}}+1\}\). Suppose the a polynomial \(F(x)\) with integer coefficients can be divided by \(x^2 - M x + 1\), find the minimal degree of \(F(x)\).",2304,algebra
+aff75c,"In a \(60\times60\) square grid of cells, the integers \(1, 2,\cdots,3600\) are filled in such a way that the sum of the numbers in every two adjacent cells (cells that share a common side are called adjacent) is not less than \(S\). Try to find the maximum value of \(S\).",3571,combinatorics
+f5ff6a,"Let \(P(x),Q(x)\) be distinct 4046-degree real polynomials with non-zero coefficients. Let \(r\) be the number of their common real roots (multiplicity counted) and \(s\) be the number of their common terms. Find the maximum possible value of \(r + s\).",6068,algebra
+0aa751,"A regular octagon is divided into 8 regions, namely \(A\), \(B\), \(C\), \(D\), \(E\), \(F\), \(G\), and \(H\) by connecting the center point with each vertex. Now we place one ball in each region. There are a total of four different colors of balls, and there are infinitely many balls of each color. It is required that balls of the same color cannot be placed in adjacent regions. Find out how many ways there are to place the balls in total. Note that the rotationally or reflectively symmetric ways are NOT considered equivalent.",6564,combinatorics
+1ec970,"There are 100 observers inside a finite circular playground (the positions of any two observers are different). Each observer has a viewing angle of \(100^{\circ}\) and can observe all the other observers within its viewing angle range (including those on the two sides of the angle) inside the playground. (Each observer is regarded as a point, and these 100 observers are in the same plane.) For \(i = 1, 2,\cdots,100\), let \(a_i\) be the number of all the observers other than itself that the \(i\)-th observer can observe. Find the maximum value of \(\sum_{i = 1}^{100}a_i\).",8700,combinatorics
+a83f0b,"Denote \(x\succ y\) as \(0\lt x - y\leqslant9\) or \(y - x\gt9\). Let \(a,b,c,d\in\{1,2,\cdots,19\}\). For the cases where \(a\succ b\), \(b\succ c\), \(c\succ d\) and \(d\succ a\), find out how many such four-tuples \((a,b,c,d)\) there are.",9120,combinatorics
+1363c5,"The rectangle \(R\) is divided into 2024 small rectangles, and the sides of each small rectangle are parallel to the sides of \(R\). The vertices of the small rectangles are called nodes. A line segment on the sides of the small rectangles, if both of its endpoints are nodes and there are no other nodes inside it, is called a fundamental line segment. Considering all the ways of division, find the sum of the maximum value and the minimum value of the number \(N\) of fundamental line segments.",10211,combinatorics
+9010d9,"Let \(G\) be a 160-order simple graph. For any vertex \(u\), there exists another vertex \(v\), such that \(u\) and \(v\) are adjacent, and there exists no vertices adjacent to both \(u\) and \(v\). Find the maximal number of edges in \(G\).",6400,combinatorics
+e5a7c0,"Let \(\mathbb{Z} / n\mathbb{Z}\) be the set of all integers modulo \(n\) (hence \(\mathbb{Z} / n\mathbb{Z}\) contains \(n\) elements). Find the second smallest composite number \(n\), such that there exists a bijective function \(g:\mathbb{Z} / n\mathbb{Z} \to \mathbb{Z} / n\mathbb{Z}\) such that the \(101\) functions \(g(x), g(x)+x, g(x)+2x, \cdots, g(x)+100x\) are all bijective from \(\mathbb{Z} / n\mathbb{Z}\) to \(\mathbb{Z} / n\mathbb{Z}\).",11021,number_theory
+a9dbc8,"The Bank of Pittsburgh issues coins that have a heads side and a tails side. Vera
+has a row of 7873 such coins alternately tails-up and heads-up, with the leftmost
+coin tails-up.
+In a move, Vera may flip over one of the coins in the row, subject to the following
+rules:
+• On the first move, Vera may flip over any of the 7873 coins.
+• On all subsequent moves, Vera may only flip over a coin adjacent to the coin
+she flipped on the previous move. (We do not consider a coin to be adjacent
+to itself.)
+Determine the smallest possible number of moves Vera can make to reach a state in
+which every coin is heads-up.",15743,combinatorics
+ae2add,"Among all the lattice points \((x, y)\) where \(1\leqslant x\leqslant9973\) and \(1\leqslant y\leqslant9973\), some lattice points are to be selected. The restrictive condition is that among the selected lattice points, no four points can form an isosceles trapezoid (a rectangle is also regarded as an isosceles trapezoid) with the base parallel to either the \(x\)-axis or the \(y\)-axis. So, what is the maximum number of lattice points that can be selected?",24931,combinatorics
+3eee67,"Each edge of the complete graph \(K_{9097}\) is labeled with \(1\), \(2\), or \(3\) such that the sum of the labels of any triangle (formed by three edges) is at least \(5\). Given that the minimum possible value of the average of all \(\binom{9097}{2}\) labels can be expressed as a fraction in its simplest form \(\frac{m}{n}\), find the value of \(m + n\).",27290,combinatorics
+89c921,"Integers \(a_1,a_2,\cdots,a_{2025}\) satisfy \(1 = a_1\leq a_2\leq\cdots\leq a_{2025}=199\). Let \(f=(a_1^2 + a_2^2 + \cdots + a_{2025}^2)-(a_1a_3 + a_2a_4 + a_3a_5 + \cdots + a_{2023}a_{2025})\). Find the minimal value of \(f\).",29800,algebra
+2c40d6,"Let \(S\) be the set of integers \(s\) satisfying \(s\geq3456\), and there exists positive integers \(a\), \(b\), \(c\), \(d\) such that \(s = a + b + c + d\) and \(s\) divides \(abc + abd + acd + bcd\). Find the sum of ten smallest elements in (S\).",34628,number_theory
+07a0c9,"Divide each side of an equilateral triangle \(ABC\) into four equal parts. Through each division point, draw lines parallel to the other two sides. The sides of triangle\(ABC\) together with these parallel lines define \(15\) lattice points. Find the smallest integer \(n\) such that, no matter which \(n\) points are chosen among these \(15\) lattice points, there always exist three points that form an isosceles triangle.",6,geometry
+8a8e73,"Given that \(x, y, z\) are all positive real numbers, consider the equation in \(w\):  
+\[
+1121610\sqrt{3270}\, w^{9} - 407425607\, w^{6} + 10360232 = 0
+\]
+which has \(k\) real roots \(w_{1}, w_{2}, \ldots, w_{k}\), satisfying  
+\[
+w_{1} < w_{2} < \cdots < w_{k}.
+\]
+If  
+\[
+m = (w_{1} + w_{k}) \cdot w_{\left\lfloor \tfrac{1 + k}{2} \right\rfloor},
+\]
+(where \(\left\lfloor \tfrac{1 + k}{2} \right\rfloor\) denotes the greatest integer not exceeding \(\tfrac{1 + k}{2}\)),  
+find the minimum value of  
+\[
+\frac{x^{3} + y^{3} + z^{3}}{xyz} + \frac{63m}{5(x+y+z)} \sqrt[3]{xyz}.
+\]",6,algebra
+7db45e,"Let \(x_{1}, x_{2}, \ldots, x_{n}\) be positive numbers satisfying
+\[
+x_{1} + x_{2} + \cdots + x_{n} = n.
+\]
+Find the largest positive integer \(n\) such that
+\[
+\frac{1}{x_{1}^{2}} + \frac{1}{x_{2}^{2}} + \cdots + \frac{1}{x_{n}^{2}}
+\;\geq\;
+x_{1}^{2} + x_{2}^{2} + \cdots + x_{n}^{2}.
+\]",10,algebra
+782ab0,"Let \(\{a_n\}\) be a sequence of positive integers, and let \([x]\) denote the greatest integer less than or equal to \(x\). Consider the system of equations in \(x,y\):  
+\[
+\big([y] \cdot x^2 + 2n + 2\big)\left(\sum_{k=0}^{n-1} \frac{1}{(k+n+1)(2n-k)}\right) 
+= \sum_{k=1}^{n} \frac{1}{k(2k-1)},
+\]
+\[
+4\big([x]y^2\big)^5 + 3n(4-n)\big([x]y^2\big)^3 - n^2(6+n)\big([x]y^2\big)^2 
++ 2n^2(4-3n)\big([x]y^2\big) = 8n^3.
+\]
+
+Suppose there are \(a_n\) distinct real solutions \((x,y)\) to this system.  
+Determine whether there exist three positive prime numbers \(p,k,q\) with \(p > k > q\) such that
+\[
+a_p < a_k < a_q.
+\]
+If no such primes exist, explain why; if they do exist, find the minimum value of \(p+k+q\).",215,algebra
+a6c73f,"Let $n$ be a positive integer such that $ 2 \leq n \leq 5 $. For each such $n$, let $A_nB_nC_nD_n$ be a rectangle with vertex $A_n$ at $(-n, 1 + 6 \sqrt{2} - \sqrt{2}n)$, and vertex $B_n$ the reflection of $A_n$ through the origin. The line segments $A_nC_n$ and $B_nD_n$ are parallel to the $x$-axis, and the line segments $A_nD_n$ and $B_nC_n$ are parallel to the $y$-axis.
+Let $P_i \quad (1 \leq i \leq 36)$ be 36 distinct points on the curve $(y - |x|)^2 + x^2 = 1$. For each point $P_i$, let the distances to the 16 sides of the four rectangles be denoted by $r_{i_1}, r_{i_2}, \ldots, r_{i_{16}}$.
+Let $d_i = \min \Big( r_{i_k} \Big) , \quad (1 \leq k \leq 16)$, and suppose that these values satisfy the condition $ 3 \sum_{i=1}^{36}d_{i}^{3}  -15\sum_{i=1}^{36} d_{i}^{2} = -1200$.
+Find the maximum value of $\sum_{i=1}^{36} d_i$.",68,geometry
+a06711,"Let \(a_1 < a_2 < \cdots < a_{38}\) be positive integers with
+\[
+a_1 + a_2 + \cdots + a_{38} = 1997.
+\]
+Define
+\[
+b_k = \min\!\left(\sum_{i=1}^{k} a_i,\; \sum_{i=k+1}^{38} a_i\right),
+\]
+and let
+\[
+S = \max(b_1, b_2, \ldots, b_{38}),
+\]
+where \(b_{38} = 0\).
+Find the minimum possible value of \(S\).",666,combinatorics
+3d7453,"A school has newly formed \(3\) classes. It is known that for any two students belonging to different classes, in the third class there are exactly \(10\) students who know both of them and \(10\) students who know neither of them. Find the total number of students across the three classes.",120,combinatorics
+a249a3,"Given that \(x, y, z\) are integers satisfying the system
+\[
+\begin{cases}
+x^2 - 7y^4 = z,\\[6pt]
+7z^4+\displaystyle\frac{\sum_{k=1}^{z} \frac{1}{k(2k-1)}}{\sum_{k=0}^{\,z-1} \frac{1}{(k+z+1)(2z-k)}}
+= \displaystyle\frac{\sum_{i=0}^{174545562} \frac{1}{i(2i-1)}}{\sum_{i=0}^{174545561} \frac{1}{(i+174545563)(349091124-i)}}
+\end{cases}
+\]
+find the maximum value of \(x+y+z\).",230,number_theory
+f11086,"For each positive integer \(k \ge 2\), define \(f(k)\) to be the product of the distinct prime factors of \(k\). All the coefficients of the polynomial function \(9P(x)\) are rational numbers. Suppose \(45 \le P(2025) \le 81\), and there are infinitely many positive integers \(n\) for which \(P(n) = f(n)\).
+How many polynomials \(P(x)\) satisfy these conditions?",42,number_theory
+ee2ffa,"Let \( p, q \) be positive integers satisfying the system of congruences:
+\[
+\begin{cases}
+p \equiv 3 \pmod{911}, \\
+q \equiv 2 \pmod{997}, \\
+p \equiv 738 \pmod{q};
+\end{cases}
+\]
+Let \( \{ a_n \}, \{ b_n \}, \{ c_n \} \) be periodic sequences of rational numbers satisfying the equations:
+\[
+\left[ 4b_n + 1 - 3\sin(\pi a_n) \right]^2 + \left[ 4c_n - 1 + 3\sin(\pi a_n) \right]^2 = 0 \quad (\forall n \in \mathbb{N})\]
+and
+\[\left| \sum_{i=1}^{p} b_i^3 \right|+\left| \sum_{i=1}^{q} c_i^3 \right|+\left| p - 3 \sum_{i=1}^{p} b_i \right|+\left| q - 3 \sum_{i=1}^{q} c_i^2 \right| = 0.\]
+Find the minimum value of \( p + q + 2a_p^2 + b_q^2 + c_{p+q}^2 + (a_p + a_{q-1})^2 + (b_p + c_q)^2 \).",3736,number_theory
+2e3189,"Let \((a_i, b_i)\), for \(1 \leq i \leq 2025\), be 2025 distinct points on the curve
+\[3x^2 + 3y^2 = 8 + 4xy + 2(x + y)|x - y|\]
+Let \(d_i\) be the distance from the point \((a_i, b_i)\) to the line \(x + y = 6\), and let \(\left\lfloor d_i \right\rfloor\) denote the greatest integer not exceeding \(d_i\).
+
+It is given that:
+\[r_i = \left\lfloor \frac{21 - 15\sqrt{2}}{2} \left( d_i^3 - 3d_i^2  - 6d_i^2 \cdot \sqrt{2} + 18d_i + 6d_i \cdot \sqrt{2} + \frac{28}{3} + \frac{16\sqrt{2}}{3} \right) \right\rfloor\]
+and that:
+\[\sum_{i=1}^{2025} r_i^2 = 2043, \quad \sum_{i=1}^{2025} r_i = 2021\]
+Find the maximum value of
+\[\sum_{i=1}^{2025} r_i^4\]",2295,geometry
+9258bb,"Let \(x\) and \(y\) be positive rational numbers that satisfy:
+\[
+1 + \sqrt{1 - 2y} = y + \frac{4x - 2 + 2\sqrt{1 - 2x}}{3 - 5x - \sqrt{1 - 2x}} + \sqrt[3]{\frac{1 + x^2}{2} + \frac{1}{6} \cdot \sqrt{9x^4 + \frac{4x^6}{3} + 9 + 18x^2}}+ \sqrt[3]{\frac{1 + x^2}{2} - \frac{1}{6} \cdot \sqrt{9x^4 + \frac{4x^6}{3} + 9 + 18x^2}}
+\]
+Given that \( kx \) and \( ky \) are both positive integers, find the minimum value of the positive integer \( k \).",225,algebra
+3ecdf4,"An album contains 25 photos, each showing three people, subject to the following conditions: (1) In each photo, the person on the left is a full brother of the person in the middle, and the person on the right is the daughter of the person in the middle. (2) The person in the middle is different in each of the 25 photos. (3) No two people who appear in the album have a child in common. What is the minimum number of distinct people that must appear in this album?",50,combinatorics
+b30012,"In a game, a positive integer $n$ not exceeding 10000 is initially written on a blackboard. Two players, Player 1 and Player 2, take turns making moves, with Player 1 going first. A move consists of erasing a positive integer $k$ greater than 1 from the blackboard and replacing it with five non-negative integers that sum to $k$ and whose pairwise differences are at most 1. For example, the integer 11 could be replaced with 2, 2, 2, 2, 3.  We also stipulate that 1 couldn't be replaced with five integers.  The game ends when a player cannot make a valid move, at which point the other player wins. Assuming both players use an optimal strategy and Player 1 wins, how many possible values of $n$ are there?",3906,combinatorics
+4e5a01,"On a 19*19 board, a black or a white stone is placed on each of the 361 squares. An operation consists of choosing one row and one column and reversing the color of all 37 stones in that row and column. Find the largest integer n such that, regardless of the initial arrangement of stones, it is always possible to perform a sequence of such operations so that the number of black stones on the board is at least n.",343,combinatorics
+9c35c5,"Assume that graph $G$ has $50$ vertices, and for any two non-adjacent vertices, they have exactly two common neighbors. Vertices $v_1$ and $v_2$ are adjacent and have no common neighbors, the degree of $v_1$ is $d(v_1)=11$. The parameter $M$ is defined as: if such a graph $G$ exists, then $M=max(d(v_2)-d(v_1))$; otherwise, $M=0$. Let $a$ be the smallest positive real root of the equation $x^{6}-4x^{5}+7x^{4}-25x^{3}+38x^{2}-6x+34=M(2x^3-4x^2+3x-19-M)$, find the remainder of the closest integer to $a^{25}$ divided by $1000$.",72,combinatorics
+9569ea,"A city is going to be built as a $10\times 10$ square grid of blocks. Now, the city is planning to set up security booths in some blocks. To ensure the safety of the entire city, city safety regulations require that for any block (regardless of whether it has a security booth itself), at least one of its four adjacent blocks (up, down, left, right) must have a security booth. How many security booths are needed at a minimum to satisfy the safety regulations?",30,combinatorics
+099aad,"In the Cartesian plane, there is a lamp at every integer lattice point, each with two states: ``on'' and ``off''. The lamp board features a special switching system: pressing any lamp toggles the states of all lamps in its entire row and entire column (on to off, and off to on). Define $f(x)=x^2-18x+23$ and $g(x)=37x+18$. The equation $f(f(x))=g(x)$ has real roots $a_1,a_2,a_3,a_4$ with $a_1 < a_2 < a_3 < a_4$. You can operate the switches at coordinates $(x,y)$ where $1\leq x\leq 17$ and $1\leq y\leq a_2+a_3$. Regardless of the initial state of the lamp board, what is the minimum number of lamps within this operable rectangular region that you can guarantee will be lit after performing operations using this system?",16,combinatorics
+0325d9,"Let the polynomial $f(x)=x^6 - 11x^5 + 28x^4 + 2x^3 + 57x^2 + 13x + 30$, and let $\alpha$ be the smallest positive real root of the equation $f(x)=0$. Set $N$ as the remainder of the closest integer to $\alpha^{35}$ divided by 1498. 
+A logistics company warehouses pallets with serial numbers $m=1,2,\dots, M$. To simplify the ``sampling-judgment'' process, three quality inspectors use their respective ``cyclic-power residue'' rules: 
+Inspector A uses a ``cycle of $7$ pallets'' rule to record the remainder of serial number $m$ divided by $7$. If this remainder is a non-zero quadratic residue of modulo $7$ (there exists an $r$ coprime to $7$ such that $r^2\equiv m\pmod7$), it is marked as ``passed''; 
+Inspector B uses a ``cycle of $11$ pallets'' rule to record the remainder of serial number $m$ divided by $11$. If this remainder is a non-zero cubic residue of modulo $11$ (there exists an $r$ coprime to $11$ such that $r^3\equiv m\pmod{11}$), it is marked as ``passed''; 
+Inspector C uses a ``cycle of $13$ pallets'' rule to record the remainder of serial number $m$ divided by $13$. If this remainder is a non-zero quartic residue of modulo $13$ (there exists an $r$ coprime to $13$ such that $r^4\equiv m\pmod{13}$), it is marked as ``passed''. 
+A serial number $m$ is marked as ``qualified'' if and only if all three inspectors mark it as ``passed''. Let the total number of qualified serial numbers be counted within the range $1 \le m \le M$, where the integer $M$ satisfies $M-724=N$. How many ``qualified'' serial numbers are there in total?",180,number_theory
+97795c,"For a given positive integer $N$, Henry writes the quotient of $ab$ divided by $N+1$ on the board for each integer pair $(a,b)$ where $1\le a,b\le N$. Find all $N$ such that the sum of the $N^2$ numbers Henry wrote on the board is $\frac{N^3-N^2+2}{4}$.
+",3,algebra
+dfd748,"Let $a_1, a_2, \ldots, a_{2026}$ satisfy $3^i < a_i < 3^{i+1}$ for each $i$. For each $1\le i\le 2025$, define
+\[
+A_i = \sum_{1\leqslant x\leqslant i+1}\prod_{y\neq x}\frac{a_{x}a_{y}-1}{a_{x}-a_{y}}.
+\]
+Find all possible values of $\sum_{i=1}^{2025} A_i^2$
+",1012,algebra
+380380,"Suppose that $g:\mathbb{Z}\to O$, where $O$ is the set of odd integers, satisfies
+$$g(a + g(a) + b)-g(a+b) =  g(a-b)-g(a-g(a)-b)$$
+for all integers $a,b$. Furthermore, we have $g(0)=9, g(1)=27, g(2)=3$, and $g(10)=63$. Find all possible values of $g(2025)$.",8109,algebra
+fbcd40,"Let $a_{1},\ldots,a_{2024}$ be nonnegative real numbers such that $a_{x}+a_{x+1}+a_{x+2}\leq2$ for all $x=1,\ldots,2024$ (we put $a_{2025}=a_{1},a_{2026}=a_{2}$ ). Find the maximal possible value of the sum
+
+\[
+\sum_{x=1}^{2024}a_{x}a_{x+2}
+\]
+",1012,algebra
+f859c7,"Find the minimum value of an integer $N$ that satisfies the following condition:
+
+Given 2025 non-degenerate triangles, each triangle has one side colored green, one side colored purple, and one side colored orange. Let the lengths of the green sides be $g_1 \ge g_2 \ge \cdots \ge g_{2025}$, the lengths of the purple sides be $p_1 \ge p_2 \ge \cdots \ge p_{2025}$, and the lengths of the orange sides be $o_1 \ge o_2 \ge \cdots \ge o_{2025}$. Then, the number of $1 \le a \le 2025$ such that $g_a, p_a, o_a$ do not form the sides of a triangle is always less than or equal to $N$.
+",2024,algebra
+666600,"Suppose that a function $f:\mathbb{Q}\rightarrow\mathbb{F}_2$ satisfies $f(r)+f(r')=1$ for all distinct rational numbers $r, r'$ satisfying either $r+r'=0$ or $r+r'=1$ or $rr'=1$. Suppose further that $f(11/3)=1$. Evaluate
+$f(7/3)+f(11/4)+f(2024/5)+f(109/11)+f(3/71)+f(5/204)$",1,algebra
+517772,"Let $p, q, r, s$ be constants such that the equation $py^3 + qy^2 + ry + s = 0$ has three distinct real roots. Find all possible values for the number of distinct real roots of the equation
+$$\left(pz^{3}+qz^{2}+rz+s\right)(6pz+2q)=\left(3pz^{2}+2qz+r\right)^{2}.$$
+",0,algebra
+09f937,"Let $r$ be the unique positive root of $x^3+x^2+x-10=0$. Suppose that for non-negative integers $k_0, k_1, k_2, \ldots , k_{100}$, we have $$\sum_{i=0}^{101}k_i r^i=2025.$$ Find the minimum possible value of $\sum_{i=0}^{101}k_i$.
+",44,algebra
+bd0a34,"Find the minimal $d$ satisfying the following property:
+
+For any sequence of integers $x_1, x_2, \ldots, x_n$ satisfying
+\[
+    0 \le x_i \le 100, \quad \sum_{i=1}^n x_i \ge 1810
+\]
+for all $i = 1, 2, \ldots, n$, there exists a subset $I$ of $\{1,2, \ldots, n\}$ such that
+\[
+    \left| \sum_{i \in I} x_i - 1810 \right| \le d.
+\]",48,algebra
+57fa34,"Let $a_0, a_1, a_2, \ldots$ be an infinite sequence of integers that is not eventually periodic, which means there does not exist integers $N, d > 0$ such that $a_{n + d} = a_n$ for all integers $n \ge N$.
+
+Let $S$ be the set of $2025$-tuples containing $(a_{n + 1}, \ldots, a_{n + 2025})$ for $n = 0, 1, \ldots$. Find the minimum number of elements of $S$.",2026,algebra
+189670,"Consider a sequence of positive integers $x_1, x_2, \ldots$ satisfying the following condition:
+\[
+    (x_{2n + d} - x_{n + d} - n)(x_{2n + d} - x_n - n - d) = 0
+\]
+for all integers $n \ge 32$ and $d \ge 1024$. Find the value of the largest possible positive integer $n$ for which $x_{n + 1} - x_n \neq 1$.",2079,algebra
+01817c,"Find the smallest positive integer $k$ such that there exist two polynomials $f(x),g(x)$ with integer coefficients, both of degree at least 2025 and leading coefficients at least 1000, such that
+\[
+    f(g(x)) - 3g(f(x)) = k
+\]
+for infinitely many real numbers $x$. ",1,algebra
+7fbcca,"Call a polynomial $P(x, y, z)$ with integer coefficients \emph{good} if for any real numbers $x, y, z$, $P(x, y, z) = 0$ if and only if $x = y = z$.
+
+Find the maximal integer $n$ such that for all \emph{good} polynomials $P$ and integers $a, b, c$ satisfying $b - a = c -b\ne 0$, $P(a, b, c)$ is divisible by $(b - a)^n$.",2,algebra
+9be9d3,"Let $x_0, x_1, \ldots, x_{2024}$ and $y_1, y_2, \ldots, y_{2024}$ be two real sequences such that for all $n = 0, 1, \ldots, 2023$,
+\[
+    x_{n+1} = 4x_n^2, \quad y_{n+1} = x_n \quad \text{ or } \quad x_{n+1} = \frac{x_n}{2}, \quad y_{n+1} = \frac{1}{4} - x_n
+\]
+holds, and $x_{2024} \le x_0$. Find the maximal value of $y_1 + \cdots + y_{2024}$.
+",506,algebra
+3a0a16,"Find all positive integers $n$ satisfying the following condition.
+
+[Condition] For any positive integer $d \le n$ and a polynomial $Q(x)$ with integer coefficients and of degree less than $d$, there exists a positive integer $k \le n$, and $k + 1$ distinct integers $a_1, \ldots, a_{k+1}$ such that
+\[
+    Q(a_{k+1}) - \sum_{i=1}^k Q(a_i) = a_{k+1}^d - \sum_{i=1}^k a_i^d.
+\]
+",2,algebra
+186c06,"Find the largest possible positive integer $n$ such that there exist $n$ distinct positive real numbers $a_1, a_2, \dots, a_n$ satisfying
+\[
+3(a_i^2 + a_j^2) + 15a_i^2 a_j^2 \ge (4a_ia_j + 1)^2
+\]
+for any $1 \le i, j \le n$.
+",3,algebra
+b76ee4,"Find the smallest positive integer $n$ such that there exist real numbers $\theta_1, \ldots, \theta_n$ satisfying
+\[
+    \sum_{i=1}^n \sin\theta_i = 0, \quad \sum_{i=1}^n \cos^2 \theta_i = n - 2025.
+\]
+",2026,algebra
+995247,"Let $x_1, \ldots, x_{2024}$ be positive real numbers such that $x_{i+1} \ge 2x_i$ for $i = 1,\ldots, 2023$. Find the maximal possible value of
+\[
+    \sum_{i=1}^{2023} \frac{x_{i} - x_{i-1}}{x_{i+1} - x_i}
+\]
+where $x_0 = 0$.
+",1012,algebra
+34d637,"Suppose that the polynomials $f(x)$ and $g(x)$ with integer coefficients satisfy the following conditions:
+
+[Condition 1] Define integer sequences $(a_n)_{n \ge 1}$ and $(b_n)_{n \ge 1}$ by $a_1 = 2024$ and
+\[
+    b_n = f(a_n), \quad a_{n+1} = g(b_n)
+\]
+for $n \ge 1$. Then for any positive integer $k$, there exists some non-zero term of $(a_n)$ or $(b_n)$ that is divisible by $k$.
+
+[Condition 2] $2025\le f(0), g(0) \le 10000$.
+
+Find the maximum possible value of $f(0)-g(0)$",3988,algebra
+e44ae2,"Show that there exists a sequence of positive integers $\{a_n\}_{n \ge 1}$ satisfying the following, and find the value of $a_{4096}$.
+\[
+    a_n = \begin{cases}
+        1 & n = 1, 2, \\
+        a_{a_{n-1}} + a_{n - a_{n-1}} & \text{otherwise.}
+    \end{cases}
+\]
+",2048,algebra
+5e72cd,"Find the smallest positive integer $n$ such that there exist real numbers $x_1, \ldots, x_n$ between $-1$ and 1 satisfying
+\[
+    \sum_{i=1}^n x_i^2 + \left(\sum_{i=1}^n x_i\right)^2 = 20, \quad |x_1 + \ldots + x_n| < 1.
+\]
+",20,algebra
+6d74be,"Find the maximum positive integer $n$ such that there exist distinct real numbers $a_1, \ldots, a_n$ between 0 and 1 satisfying
+\[
+    a_i^{[1 / a_j]} = a_j^{[1 / a_i]}
+\]
+for all $1 \le i, j\le n$, where $[x]$ is the greatest integer not exceeding $x$.
+",4,algebra
+7f5538,"A polynomial $P$ with integer coefficients is called a geometric polynomial if its degree is at least 2 and the set $\{P(k): k \in \mathbb{Z}\}$ contains an infinite geometric progression. Suppose that the leading coefficient and constant term of a geometric polynomial $Q$ are $64$ and $-486$, respectively. Find $Q(5)$.",33614,algebra
+5464c7,"Let $\{a_n\}_{n \ge 1}$ be the sequence of integers satisfying $a_1 = 0$ and
+\[
+    a_n = \max_{1 \le i \le n - 1} \left\{a_i + a_{n - i} + \min(i, n - i) \right\}
+\]
+for all $n \ge 2$. Determine $a_{2025}$.
+",11059,algebra
+69fbab,"Two players, Boris and Natasha, play the following game on an infinite grid of unit squares, all initially colored white. The players take turns starting with Boris. On Boris's turn, Boris selects one white unit square and colors it blue. On Natasha's turn, Natasha selects two white unit squares and colors them red. The players alternate until Boris decides to end the game. At this point, Boris gets a score, given by the number of unit squares in the largest simple polygon containing only blue unit squares and some yellow unit squares. What is the largest score Boris can guarantee?",4,combinatorics
+d3af32,"In a board of $125 \times 125$ grids, we pick $k$ unit squares such that every picked square shares vertices with at most $1$ other picked square. Some squares are colored red and some squares are colored blue, where red squares and blue squares satisfy the following condition: any two squares of the same color do not share a side or a vertex. Determine the maximum of $k$.",5292,combinatorics
+279f5c,"Suppose there are $40$ professional baseball teams participating in a tournament. In each round of the game, we will divide the $40$ teams into $20$ pairs, and each pair plays the game at the same time. After the tournament, it is known that every two teams have played at most one game. Find the smallest positive integer $a$, so that we can arrange a schedule satisfying the above conditions, and if we take one more round, there is always a pair of teams who have played in the game.",21,combinatorics
+73b435,"Alice and Bob play a game on a board consisting of one row of 2020 consecutive squares. They take turns placing tiles that cover two adjacent squares, with Alice going first. By rule, a tile must not cover a square that is already covered by another tile. The game ends when no tile can be placed according to this rule. Alice's goal is to maximize the number of uncovered squares when the game ends; Bob's goal is to minimize it. What is the greatest number of uncovered squares that Alice can ensure at the end of the game, no matter how Bob plays?",290,combinatorics
+9a1984,"Several positive integers are written on a chalkboard in a row from left to right. A transformation is performed as follows: For every pair of consecutive integers on the chalkboard, the sum of those two numbers is written between them.  After 2013 such transformations, how many times does the number 2013 appear on the chalkboard if the initial numbers written on the chalkboard are 1, 2, 3, ..., 1000?",1198,combinatorics
+084149,"Let $\gamma \geq 1$ be a real number. Sun Wukong and the Sea God play a turn-based game on an infinite grid of unit squares. Before the game starts, the Sea God chooses a finite number of cells to be flooded with seawater. Sun Wukong is building a magical barrier, which is a subset of unit edges of the grid (called walls) forming a connected, non-self-intersecting path or loop.  Additionally, there is a magical artifact that randomly generates a finite number of extra walls on the grid, with no specific pattern or distribution.
+
+The game then begins with Sun Wukong moving first. On each of Sun Wukong's turns, he adds one or more walls to the magical barrier, as long as the total length of the barrier is at most $\gamma n$ after his $n$th turn. On each of the Sea God's turns, every cell which is adjacent to an already flooded cell and with no wall between them becomes flooded as well. Sun Wukong wins if the magical barrier forms a closed loop such that all flooded cells are contained in the interior of the loop — hence stopping the flood and saving the world. What is the largest constant $C$ such that for all $\gamma > C$ can Sun Wukong guarantee victory in a finite number of turns no matter how the Sea God chooses the initial cells to flood?",8,combinatorics
+060fe3,"Let $n \geq 2$ be an integer. An $n \times n$ board is initially empty. Each minute, you may perform one of four moves:
+If there is an L-shaped tromino region of three cells without stones on the board (see figure; rotations not allowed), you may place a stone in each of those cells.
+If all cells in a column have a stone, you may remove all stones from that column.
+If all cells in a row have a stone, you may remove all stones from that row.
+
+Find the largest positive integer $n \leq 500$ such that it is possible that, after some non-zero number of moves, the board has no stones.",498,combinatorics
+a7effa,"Two players, Ivan and Maria, are playing a guessing game. Ivan chooses three integers $x, y, z$ such that $0 \le x, y, z \le 9$. Maria tries to guess these integers by asking Ivan questions. In each question, Maria gives Ivan three integers $a, b, c$ such that $0 \le a, b, c \le 9$. Ivan then calculates and tells Maria the value of $|x+y-a-b| + |y+z-b-c| + |z+x-c-a|$. What is the minimum number of questions Maria needs to ask to be sure of determining Ivan's three integers?",3,combinatorics
+2f5327,"There are 579 students at a prestigious Korean university known as KAIST. Some students come together to form numerous study groups (a student may belong to different study groups). Some study groups join together to form several research labs (a study group may belong to different research labs). There are a total of $k$ research labs. Suppose that the following conditions hold:        (i) Each pair of students are in exactly one study group.        (ii) For each student and each research lab, the student is in exactly one study group of the research lab.        (iii) Each study group has an odd number of students. In addition, a study group with $2m + 1$ students ($m$ is a positive integer) is in exactly $m$ research labs.        Find all possible values of $k$.",289,combinatorics
+86a7fd,"Consider a matrix of size $230 \times 230$ whose entries are real numbers of absolute value not exceeding 1, and the sum of all entries is 0. Let $m$ be an odd positive integer. Determine the least number $C$ such that every such matrix necessarily has a row or a column with the sum of its entries not exceeding $C$ in absolute value.",115,combinatorics
+1ea910,"Two players $A$ and $B$ are playing a game by taking turns writing numbers from the set $\{1, \dots, N\}$ on a blackboard, where $N$ is a positive integer. Player $A$ starts the game by writing the number $1$. If a player writes the number $n$, then the other player can write either $n+1$ or $2n$, provided the number does not exceed $N$. The player who writes the number $N$ wins. We say that $N$ is of type $A$ if player $A$ has a winning strategy, and of type $B$ if player $B$ has a winning strategy. The game board is made of a special type of wood imported from Brazil.
+
+Find the least $N > 400$ such that it is a type B number.",512,combinatorics
+de5abe,"The Bank of Hanoi issues $n$ different types of coins, numbered from $1$ to $n$. A cashier arranges these coins in a $2004 \times 2004$ matrix. Let $X_i$ be the set of distinct coin types in row $i$, and $Y_j$ the set of distinct coin types in column $j$, for $1 \le i, j \le 2004$. The cashier's arrangement is considered ""harmonious"" if all $X_i$ and $Y_j$ are distinct sets. Find the least integer $n$ such that a harmonious arrangement is possible.",13,combinatorics
+3087c7,"Find the smallest positive integers $n$, for which the numbers in the set $S=\{1,2, \ldots, n\}$ can be colored red and blue, with the following condition being satisfied: the set $S \times S \times S$ contains exactly 2007 ordered triples $(x, y, z)$ such that (i) $x, y, z$ are of the same color and (ii) $x+y+z$ is divisible by $n$. Additionally, find all positive integers $m$ such that $m$ is a multiple of 3.",69,combinatorics
+8256c3,"A sequence of positive integers $a_1, a_2, \ldots, a_n$ is called a Korean sequence if it satisfies the following conditions:
+\begin{itemize}
+    \item $a_1 < a_2 < \ldots < a_n$
+    \item For each $1 \leq k < n$, we define two sets $A_k = \{a_1, a_2, \ldots, a_k\}$ and $B_k = \{a_{k+1}, a_{k+2}, \ldots, a_n\}$. A partition $(A_k, B_k)$ is called good if the least common multiple of the elements in $A_k$ is equal to the greatest common divisor of the elements in $B_k$.
+\end{itemize}
+Determine the minimum value of $n$ such that there exists a Korean sequence of length $n$ with exactly 2015 good partitions.",3024,combinatorics
+2790e0,"Two players, Alice and Bob, play a game in which they take turns choosing positive integers less than or equal to a positive integer $n$. The rules of the game are:
+
+(i) A player cannot choose a number that has been chosen by either player on any previous turn.
+
+(ii) A player cannot choose a number consecutive to any of those the player has already chosen on any previous turn.
+
+(iii) The game is a draw if all numbers have been chosen; otherwise the player who cannot choose a number anymore loses the game.
+
+Alice takes the first turn.  Find the largest value of $n$ such that the game ends in a draw.",6,combinatorics
+5c3500,"The leader of a Vietnamese Olympiad team selects positive integers $n$ and $k$ with $n>2k$, and shares them with the deputy leader and a contestant. The leader then secretly reveals an $n$-digit binary string to the deputy leader, who writes down all $n$-digit binary strings that differ from the leader's string in exactly $k$ positions. The contestant is allowed to examine the strings written by the deputy leader and attempt to guess the leader's string.  What is the minimum number of guesses (in terms of $n$ and $k$) required to guarantee a correct answer?",1,combinatorics
+a3dfa0,"Find the largest positive integers $n$ that is no more than $2000$ for which we can fill in the entries of an $n \times n$ table with the following properties:
+
+\begin{itemize}
+  \item each entry can be one of $I, M, O$ and $P$;
+  \item in each row and each column, the letters $I, M$ and $O$ occur the same number of times; and
+  \item in any diagonal whose number of entries is a multiple of three, the letters $I, M$ and $O$ occur the same number of times.
+  \item the letter P does not appear on any entry at all
+  \item $n$ is divisible by $13$.
+\end{itemize}",1989,combinatorics
+6274f6,"Queenie and Horst play a game on a $40 \times 60$ chessboard with some strange rules. In the beginning the board is empty. In every turn, Horst places a black knight on an empty square in such a way that his new knight does not attack any previous knights. The knight can jump in an L-shape, i.e., two squares in one direction and one square in a perpendicular direction. Then Queenie places a white queen on an empty square. The queen can move any number of squares in a straight line horizontally, vertically, or diagonally. The game gets finished when somebody cannot move. The players are also allowed to play randomly as long as the rules are followed.
+
+Find the maximal positive $K$ such that, regardless of the strategy of Queenie, Horst can put at least $K$ knights on the board.",600,combinatorics
+1df532,"There are 100 empty boxes $B_{1}, \ldots, B_{100}$ in a row on a table and an unlimited supply of pebbles. Given a positive integer $n$, Alice and Bob play the following game.
+
+In the first round, Alice takes $n$ pebbles and distributes them into the 100 boxes as she wishes. Each subsequent round consists of two steps:
+
+(a) Bob chooses an integer $k$ with $1 \leqslant k \leqslant 99$ and splits the boxes into the two groups $B_{1}, \ldots, B_{k}$ and $B_{k+1}, \ldots, B_{100}$.
+
+(b) Alice picks one of these two groups, adds one pebble to each box in that group, and removes one pebble from each box in the other group.
+
+Bob wins if, at the end of any round, some box contains no pebbles. Find the smallest $n$ such that Alice can prevent Bob from winning.",2600,combinatorics
+8accd9,"The Lucas numbers $L_{0}, L_{1}, L_{2}, \ldots$ are defined inductively by $L_{0}=2, L_{1}=1$, and $L_{n+1}=L_{n}+L_{n-1}$ for $n \geqslant 1$. The Fibonacci numbers $F_{0}, F_{1}, F_{2}, \ldots$ are defined inductively by $F_{0}=0, F_{1}=1$, and $F_{n+1}=F_{n}+F_{n-1}$ for $n \geqslant 1$. Determine the smallest size of a set $S$ of integers such that for every $k=2,3, \ldots, 125$ there exist some $x, y \in S$ such that $x-y=F_{k}$. Also, there exist some $a, b \in T$ for some set $T$ such that $a-b = L_{100}$.",64,combinatorics
+d33891,"An integer $m \geqslant 100$ is called colorful if, given infinitely many candies in each of $99$ flavors $F_{1}, F_{2}, \ldots, F_{99}$, it is possible to place $m$ of them around a circle so that in any group of $100$ consecutive candies there is at least one candy of flavor $F_{i}$ for each $i=1, \ldots, 99$.  Additionally, let $k$ be an integer such that $k > m$.
+
+Prove that there are only finitely many positive integers which are not colorful. Find the largest among them.",9701,combinatorics
+1fbfca,"A polyomino is a figure which consists of unit squares joined together by their sides. (A polyomino may contain holes.) Consider a grid of unit square cells which extends to infinity in all directions. Find the greatest positive integer $C$ which satisfies the following condition: For every colouring of the cells of the grid in $36$ colours, there is some polyomino within the grid which contains at most $35$ colours and whose area is at least $C$.
+",2450,combinatorics
+c32b7c,"Given right triangle $ XYZ$ with hypothenuse $ XZ$ and $ \angle X = 50^{\circ}$. Points $ P$ and $ Q$ on the side $ YZ$ are such that $ \angle PXZ = \angle QXY = 10^{\circ}$. Compute the ratio $2 \times YQ/ZP$.
+",1,geometry
+eb39a8,"Given a convex $n$-sided polygon $B_1\ldots B_n$. Let $Q_i$ ($i = 1,\ldots, n$) be points on the boundary of the polygon such that $B_iQ_i$ divides the area of the polygon in half.  Assume that none of the points $Q_i$ coincide with any vertex of the polygon and that these points lie on $k$ sides of the $n$-sided polygon. For a given value of $n$, determine the minimum possible value of $k$.
+",3,geometry
+2f0cb0,"Let XYZ be a fixed triangle in the plane. Let P be an arbitrary point in the plane. The circle with center P, passing through X, meets XY and XZ again at points X_y and X_z respectively. Points Y_x, Y_z, Z_x and Z_y are defined similarly. A point P is called special if the points X_y, X_z, Y_x, Y_z, Z_x, and Z_y are concyclic. For a given triangle XYZ, how many special points can there be?
+",4,geometry
+a749f2,"Let $XYZ$ be an acute-angled, nonisosceles triangle. Altitudes $XX'$ and $YY'$ meet at point $O$, and the medians of triangle $XOY$ meet at point $N$. Line $ZN$ bisects segment $X'Y'$. Find angle $Z$ in terms of degree.
+",45,geometry
+f28c01,"Diagonals of a quadrilateral $WXYZ$ are equal and intersect at point $M$. The perpendicular bisectors to segments $WX$ and $YZ$ intersect at point $N$, and the perpendicular bisectors to $XY$ and $WZ$ intersect at point $O$. Find angle $\frac{\angle NMO}{5}$ in terms of degree.
+",18,geometry
+567457,"Let $I$ be the incenter of triangle $XYZ$, $N$ be the midpoint of $XZ$, and $V$ be the midpoint of arc $XY$ of the circumcircle not containing $Z$. It is known that $\angle XIN = 90^\circ$. Compute $\frac{2 \times ZI}{IV}$.
+",4,geometry
+e1496e,"Let $PQRS$ be a convex quadrilateral. The circumcenter and the incenter of triangle $PQR$ coincide with the incenter and the circumcenter of triangle $PRS$ respectively. It is known that $PQ = 1$. What is the value of angle P in degrees?
+",72,geometry
+c8fab8,"Let $XYZ$ be an acute-angled scalene triangle and $P$ be a point inside it such that $\angle XPY  = \angle YPZ = 120^o$. A circle centered at point $Q$ passes through the midpoints of the sides of $XYZ$. For $Y, P, Q$ collinear, find angle $XYZ$  in terms of degree.
+",30,geometry
+857c33,"Let $XYZ$ be a triangle with $\angle X = 120^\circ$, $J$ be the incenter, and $N$ be the midpoint of $YZ$. The line passing through $N$ and parallel to $XJ$ intersects the circle with diameter $YZ$ at points $U$ and $V$ ($X$ and $U$ lie on the same semiplane with respect to $YZ$). The line passing through $U$ and perpendicular to $VJ$ intersects $XY$ and $XZ$ at points $R$ and $S$ respectively. Find the value of $\angle RJS$ in terms of degree.
+",90,geometry
+69ce73,"Suppose that $PQRST$ is a convex pentagon with $\angle P = 90^o, \angle Q = 105^o, \angle R = 90^o$ and $PQ = 2, QR = RS = ST = \sqrt{2}$. If the length of $PT$ is $\sqrt{a} - b$ where $a, b$ are integers, what is the value of $a + b$?
+",4,geometry
+fdbbd6,"Let $\Gamma$ be the circumcircle of right-angled triangle $XYZ$ ($\angle X = 90^{\circ}$). The tangent to $\Gamma$ at point $X$ intersects the line $YZ$ at point $T$. Suppose that $N$ is the midpoint of the minor arc $XY$, and $TN$ intersects $\Gamma$ for the second time in $R$. The tangent to $\Gamma$ at point $R$ intersects $XZ$ at $L$. Compute $\angle TLC$ in terms of degree.
+",90,geometry
+68e2e7,"Let $ XYZ $ be a triangle with incenter $ J $. Let segment $ XJ $ meets the incircle of triangle $ XYZ $ at point $ K $. Suppose that the angle created by line $ YK $ and line $ XZ $ is $90^\circ$. Let $ R $ be a point such that $ \angle YRX = \angle RXJ = 90^\circ $. Point $ S $ lies on segment $ YK $ such that the circumcircle of triangle $ XYS $ is tangent to line $ YJ $. Point $ T $ lies on line $ RS $ such that $ \angle JXT = \angle TXZ $. Let $\gamma$ be the value of $\angle XTR$ in terms of degree, compute $\frac{\gamma}{3}$.
+",15,geometry
+686753,"Let $\overline{CD}$ be a chord of a circle $\Omega$, and let $R$ be a point on the chord $\overline{CD}$. Circle $\Omega_1$ passes through $C$ and $R$ and is internally tangent to $\Omega$. Circle $\Omega_2$ passes through $D$ and $R$ and is internally tangent to $\Omega$. Circles $\Omega_1$ and $\Omega_2$ intersect at points $R$ and $S$. Line $RS$ intersects $\Omega$ at $U$ and $V$. Assume that $CR=4$, $RD=6$, $UV=11$, and $RS^2 = \frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+",29,geometry
+fddf45,"Triangle $XYZ$ has side lengths $XY=4$, $YZ=5$, and $ZX=6$. Points $P$ and $Q$ are on ray $XY$ with $XY<XP<XQ$. The point $R \neq Z$ is a point of intersection of the circumcircles of $\triangle XZP$ and $\triangle QYZ$ satisfying $PR=2$ and $QR=7$. Then $YQ$ can be expressed as $\tfrac{a+b\sqrt{c}}{d}$, where $a$, $b$, $c$, and $d$ are positive integers such that $a$ and $d$ are relatively prime, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.
+",32,geometry
+ef0629,"Point $P$ lies on side $YZ$ of $\triangle XYZ$ so that $\overline{XP}$ bisects $\angle YXZ$. The perpendicular bisector of $\overline{XP}$ intersects the bisectors of $\angle XYZ$ and $\angle XZY$ in points $Q$ and $R$, respectively. Given that $XY=4$, $YZ=6$, $ZX=8$, the area of $\triangle XQR$ can be written as $\frac{m\sqrt n}{p}$, where $m$ and $p$ are relatively prime positive integers, and $n$ is a positive integer not divisible by the square of any prime. Find $m+n+p$.
+",26,geometry
+926e24,"Let $DEF$ be an acute triangle with circumcircle $\Omega$ and orthocenter $O$. Suppose the tangent to the circumcircle of $\triangle OFE$ at $O$ intersects $\Omega$ at points $P$ and $Q$ with $OD=3$, $OP=2$, $OQ=6$. The area of $\triangle DEF$ can be written as $a\sqrt b$, where $a$ and $b$ are positive integers, and $b$ is not divisible by the square of any prime. Find $a+b$.
+",58,geometry
+ede277,"Let $PQRS$ be an isosceles trapezoid with $PS=QR$ and $PQ<RS.$ Suppose that the distances from $P$ to the lines $QR,RS,$ and $QS$ are $15,18,$ and $10,$ respectively. Let $A$ be the area of $PQRS.$ Find $\sqrt2 \cdot A.$
+",567,geometry
+634a49,"Let $EFGH$ be a parallelogram with $\angle FEH < 90^{\circ}$. A circle tangent to sides $\overline{HE}$, $\overline{EF}$, and $\overline{FG}$ intersects diagonal $\overline{EG}$ at points $X$ and $Y$ with $EX < EY$. Suppose that $EX = 3$, $XY = 9$, and $YG = 16$. Then the area of $EFGH$ can be expressed in the form $a\sqrt b$, where $a$ and $b$ are positive integers, and $b$ is not divisible by the square of any prime. Find $a+b$.
+",150,geometry
+af204c,"Let $PQRS$ be a convex quadrilateral with $PQ=2, PS=7,$ and $RS=3$ such that the bisectors of acute angles $\angle{QPS}$ and $\angle{PSR}$ intersect at the midpoint of $\overline{QR}.$ Find the square of the area of $PQRS.$
+",180,geometry
+4e2c56,"Two externally tangent circles $\Gamma_1$ and $\Gamma_2$ have centers $P_1$ and $P_2$, respectively. A third circle $\Sigma$ passing through $P_1$ and $P_2$ intersects $\Gamma_1$ at $Q$ and $R$ and $\Gamma_2$ at $S$ and $T$, as shown. Suppose that $SQ = 2$, $P_1P_2 = 15$, $RT = 16$, and $SQP_1RTP_2$ is a convex hexagon. Find the area of this hexagon.
+",140,geometry
+d2adbb,"Rhombus $WXYZ$ has $\angle ZWX<90^{\circ}$. There is a point $Q$ on the incircle of the rhombus such that the distances from $Q$ to lines $ZW$, $WX$, and $XY$ are $9$, $5$, and $16$, respectively. Find the perimeter of $WXYZ$.
+",125,geometry
+006133,"Let $\triangle{XYZ}$ be an isosceles triangle with $\angle X=90^{\circ}$. There exists a point $Q$ inside $\triangle{XYZ}$ such that $\angle QXY=\angle QYZ=\angle QZX$ and $XQ=14$. Find the area of $\triangle{XYZ}$.
+",490,geometry
+8aa2c4,"In $\triangle XYZ$ with side lengths $XY=13$, $YZ=14$, and $ZX=15$, let $N$ be the midpoint of $\overline{YZ}$. Let $R$ be the point on the circumcircle of $\triangle XYZ$ such that $N$ is on $\overline{XR}$. There exists a unique point $S$ on segment $\overline{XN}$ such that $\angle RYS = \angle RZS$. Then $XS$ can be written as $\frac{a}{\sqrt{b}}$, where $a$ and $b$ are relatively prime positive integers. Find $a+b$.
+",247,geometry
+fbd72f,"Let $WXYZ$ be a tetrahedron such that $WX = YZ = \sqrt{41}$, $WY = XZ = \sqrt{80}$, and $WZ = XY = \sqrt{89}$. There exists a point $P$ inside the tetrahedron such that the distances from $P$ to each of the faces of the tetrahedron are all equal. This distance can be written in the form $\frac{a \sqrt{b}}{c}$, when $a$, $b$, and $c$ are positive integers, $a$ and $c$ are relatively prime, and $b$ is not divisible by the square of any prime. Find $a+b+c$.
+",104,geometry
+24f38c,"Let $XYZ$ be a triangle. How many points $Q$ on segment $YZ$ are there satisfying the following property: If $A$ and $B$ are the intersections of line $XQ$ with the common external tangent lines of the circumcircles of triangles $XQY$ and $XQZ$, then\[\left(\frac{XQ}{AB}\right)^2+\frac{QY\cdot QZ}{XY\cdot XZ}=1\] ?
+",2,geometry
+0581bc,"A circle passes through vertex $Y$ of triangle $XYZ$, intersects sides $XY$ and $YZ$ at points $P$ and $Q$ respectively, and touches side $XZ$ at its midpoint $R$. The point $S$ on the arc $YQ$ (not containing $P$) is such that $\angle QPS = \angle XZY$. Find $\angle YXZ$ in terms of degree given that triangle $ZPS$ is equilateral.
+",75,geometry
+d2f2d4,"Let $PQRS$ be a parallelogram such that $\angle SPQ = 60^{\circ}.$ Let $M$ and $N$ be the midpoints of $QR$ and $RS,$ respectively. Assuming that $PQMN$ is a cyclic quadrilateral, find $\angle PQS$ in degrees.
+",75,geometry
+3abf34,"For a collection of points on a flat surface, we draw the perpendicular bisectors of the line segments joining each pair of these points and count the number of points where these perpendicular bisectors intersect. What is the largest possible number of intersection points if we begin with fifteen points?
+",4550,geometry
+f9d265,"Points $P, Q,$ and $R$ are on a circle such that $\triangle PQR$ is an acute triangle. $L, M ,$ and $N$ are on the circle such that $PL$ is perpendicular to $QR$ at $S$, $QM$ is perpendicular to $PR$ at $T$, and $RN$ is perpendicular to $PQ$ at $U$. Find the value of\[ \frac{2PL}{PS}+\frac{2QM}{QT}+\frac{2RN}{RU}\]
+",8,geometry
+c692de,"Find all positive integers $m > 1$ such that there exists a permutation $(a_1, a_2, \dots, a_n)$ of the all divisors of $m$ for which $a_1 + \dots + a_i$ is a perfect square for all $1 \leq i \leq n$.
+",3,number_theory
+ccaae2,"Find the number of all positive integers $2\leq m \leq 2000$ that satisfy the following condition: For any $m$ distinct positive integers $(n_1, \ldots, n_m)$, at least one of the following two conditions holds: $n_1 + \ldots + n_m$ is a multiple of $m$, or there exists a permutation $(k_1, \ldots, k_m)$ such that $k_1 + 2k_2 + \ldots + mk_m$ is a multiple of $m$.
+",1009,number_theory
+150383,"Suppose that the function $g:\mathbb{N}\rightarrow \mathbb{N}$ satisfies following four conditions.
+
+(1) There exists a natural number $n$ such that $g(n) \neq 1$.
+
+(2) For any natural numbers $x$ and $y$, $g(xy) = g(x) + g(y) - 1$.
+
+(3) There are infinitely many $n$ such that $g(k) = g(n-k)$ for any $k < n$.
+
+(4) $g(39455)=11$ and $g(94175)=21$.
+
+Find $g(41000)$.",31,number_theory
+e8965e,"Does there exist a positive integer $n$ satisfying the following condition? If so, find the smallest such $n$.
+
+(Condition) There exist infinitely many ordered $n$-tuples of positive rational numbers $(x_1, \dots, x_n)$ such that both $\sum_{i=1}^n i \cdot x_i$ and $\frac{1}{x_1 + \dots + x_n} + \frac{1}{x_2 + \dots + x_n} + \dots + \frac{1}{x_n}$ are positive integers.
+",3,number_theory
+d4b03c,"$\alpha$ is a real number that is not rational, and $k$ is a positive integer. A pair of positive integers $(m, n)$ is called ""pretty"" if $m\lceil n\alpha \rceil - n \lfloor m\alpha \rfloor =k$. A pretty pair $(m, n)$ is called ""cool"" if neither $(m-n, n)$ nor $(m, n-m)$ are pretty pairs. Find the number of cool pairs when $k=2310$.
+",6912,number_theory
+e6f569,"Let a set of integers $X$ be called a \textit{good set} if it satisfies the following condition:
+(Condition) For any $a, b \in X$ (where $a$ and $b$ can be equal) and any $i \in \mathbb{Z}$, $a^2 + i \cdot a \cdot b + b^2 \in X$.
+An ordered pair $(x, y)$ of two different positive integers is called a \textit{complex pair} if there are at least two good sets containing both $x$ and $y$. A non-negative integer $m$ is called a \textit{good number} if there exists a complex pair $(x,y)$ such that $m=x^2 + y^2$. Find $20$th smallest good number.
+",208,number_theory
+501733,"Find the number of positive integers $n\ge 2$ less than 200 that are relatively prime to 6 such that for any positive integer $a$ satisfying the condition that the quotient when $n$ is divided by $a$ is 2, the binomial coefficient $\binom{a-1}{n-2a-1}$ is a multiple of $n-2a$.
+",44,number_theory
+98b1df,"For a positive integer $n$, we call $g:\mathbb{Z}\rightarrow \mathbb{Z}$ a \textif{$n$-good function} if $g(1)=1$ and for any two distinct integers $a$ and $b$, $g(a)-g(b)$ divides $a^n -b^n$. We call a positive integer $n$ an \textit{exotic integer} if the number of $n$-good functions is twice of an odd integer. Find $132$th exotic integer.
+
+",69169,number_theory
+ee3b3e,"Find the smallest positive integer $m$ that satisfies the following condition:
+(Condition) There exist $m$ distinct positive integers $a_1, \dots, a_m$ such that $(1-\frac{1}{a_1})\cdots (1-\frac{1}{a_m}) = \frac{42}{2010}$.
+",48,number_theory
+3f136a,"Find the smallest positive integer $n$ for which there exist integer-coefficient polynomials $P_1, \dots, P_n$ such that $\frac{{P_1(x)}^2 + \cdots + {P_n(x)}^2}{x^2 + 7}$ is a perfect square of an positive integer.
+",5,number_theory
+4ce351,"Find the largest $n$ for which there exist positive integers $x_1, \dots, x_n$ satisfying the following condition:
+(Condition) For any $2 \leq i \leq n-1$, $x_{i+1}x_{i-1} + x_{i+1} + x_{i-1} = x_i^2$.
+",4,number_theory
+13e09f,"Given a positive integer $n$, there exists an integer $a$ such that the sequence $\{a_k\}$ defined by $a_0 = a$ and $a_k = \frac{a_{k-1}}{k} + k^{n-1}$ consists only of integers. Find the possible values of the remainder when $n$ is divided by 3.
+",2,number_theory
+b47b56,"Consider ordered quadruples of positive integers $(a,b,c,d)$ satisfying the following two conditions:
+(1) $a+b=c+d$
+(2) $ab=2cd$
+
+Find the maximum value of $k$ such that $\frac{c^2 +d^2}{cd} \geq k$ holds for all such quadruples.
+",6,number_theory
+e9255f,"Find the number of positive integers $m$ less than or equal to 100 such that there exist two non-empty subsets $X, Y$ of $\{1, 2, \dots, m\}$ satisfying $X \cap Y = \emptyset$ and the sum of the elements in $X$ and the sum of the elements in $Y$ are each equal to $\frac{m(m+1)}{6}$.
+",64,number_theory
+6f0e7a,"A positive integer $n$ is called a cool integer if there exists a permutation $(x_1, \dots, x_n)$ of $(1, \dots, n)$ such that for any $i$, $x_1 + \dots + x_i$ is not a perfect square. Find the 2025th smallest cool integer.
+",2030,number_theory
+5ac150,"Find the maximum value of $m$ such that for any partition of $\{1, 2, \dots, 40\}$ into $m$ sets, there exists a set containing three elements $x, y, z$ (possibly with repetition) such that $x + y - z = 0$.
+",3,number_theory
+29ed2c,Let $P$ be a polynomial of degree $n>1$ such that all its non-zero coefficients are 1 or -1. Suppose that $P(k)$ is a multiple of $n$ for any positive integer $k$. Find the minimum possible number of non-zero coefficients in $P$.,2,number_theory
+8fea51,"Let $b_m b_{m-1}\cdots b_0$ be the base-7 representation of a positive integer $n$ for some positive integer $m$. Let $a_i$ be the number obtained by removing the digit $b_i$ from the base-7 representation of $m$ (read in base 7). Find the number of $n$ that satisfy $n=\sum_{i=0}^{m-1}a_i$.
+",42,number_theory
+b6fb96,"Let $d(n)$ be the number of positive divisors of $n$ other than 1 and itself. Find the least nonnegative integer $a$ for which there exists a positive integer $n$ such that
+\[
+    d(n) = d(n + 735) = a.
+\]
+",2,number_theory
+9d81c6,"We call a triple $(x, y, z)$ of (not necessarily positive) integers a \textit{good triple} if $y^x z^y x^z$ is a positive prime number. We enumerate good triples as $(x_1, y_1, z_1), (x_2, y_2, z_2), \dots$ in a way that $x_k^2 + y_k^2 + z_k^2 \le x_{k+1}^2 + y_{k+1}^2 + z_{k+1}^2$ holds for all positive integer $k$. Evaluate $x_{200}^2 + y_{200}^2 + z_{200}^2$",18771,number_theory
+d8dac0,"Given a positive integer n, perform the following operation:
+
+(i) Remove the last digit of n.
+
+(ii) Add 3 times the removed digit to the remaining number.
+
+For example, if $n = 1013$, the operation yields $101 + 9 = 110$. If $n = 2$, the operation yields $0 + 6 = 6$.
+
+Starting with $260^{135}$, repeatedly apply this operation $2025$ times. What is the final resulting number?
+",8,number_theory
+91b02b,"Find the number of integer-coefficient polynomials $P$ that satisfy all of the following conditions:
+
+(1) $\deg P \le 3$, and all coefficients of $P$ are between $0$ and $2012$, inclusive.
+(2) $P(x) + P(-x)$ is a multiple of $2013$ for all positive integers $x$ less than or equal to $100$.
+(3) The remainders when $P(0), P(1), \dots, P(2012)$ are divided by $2013$ are all distinct.
+",7200,number_theory
+ef1ac9,"Positive integers $M$ and $N$ satisfy the following conditions:
+
+(1) $M$ is a 1000-digit number, and none of its digits are 0.
+(2) The decimal expansion of $\left \lfloor \frac{M}{N} \right\rfloor$ contains the digit 0 exactly $A$ times. (The leading digit of the decimal expansion is not 0.)
+
+Find the maximum possible value of $A$.
+",938,number_theory
+a46ef3,"Let a number that can be expressed as $n^a + 1$ (where $a$ is a positive integer) for a positive integer $n$ be called an $n$-near number. Denote by $(B_1, T_1, S_1), \ldots, (B_k, T_k, S_k)$ all ordered triples $(B, T, S)$ such that $B + T = S$, where $B$ is a 2-near number, $T$ is a 3-near number, and $S$ is a 6-near number. Evaluate $\sum_{i=1}^k (B_i + T_i + S_i)$
+",162,number_theory
+7f802a,"For a positive integer $n$, find the sum of all $n$ such that the number of ordered pairs of positive integers $(a,b)$ where the greatest common divisor of $a$ and $b$ is $2023$ and the least common multiple of $a$ and $b$ is $n!$ does not exceed 4000.
+",820,number_theory
+fa4642,"A finite set $U$ of positive integers such that $|U|\ge 3$ is called a \textit{good set} if the greatest common divisor of any three distinct elements of $U$ is $1$, and for any two distinct elements of $U$, there exists another element that is a divisor of their product. A positive integer $m$ is called a \textit{good number} if there exists a good set $U$ such that $m$ is the product of elements of $U$. Find the $20$th smallest good number.",1600,number_theory
+e094b6,"You have entered a quiz competition. A positive integer $F \ge 2$ is given, and the competition starts with a number $S$ provided by the organizers. In each turn, you look at the number most recently provided by the organizers and choose a divisor or multiple other than 1 to submit. The organizers will then add or subtract 1 from the number you submitted and present it back to you. You win if you reach $F$ within $50$ turns. Find the $50th$ smallest value of $F$ for which you can succeed regardless of the initial number $S$.",93,number_theory
+4835e8,"Let $m$ and $n$ be positive integers, and let $p$ be a prime. Suppose that $\log_p (m^2+n)$ and $\log_p(m+n^2)$ are both positive integers greater than 1. Denote by $(m_1, n_1, p_1), \ldots, (m_k, n_k, p_k)$ all possible triples $(m,n,p)$. Evaluate $\sum_{i=1}^k (m_i + n_i + p_i)$.
+",20,number_theory
+0e644e,"Let $ABC$ be an acute-angled triangle with integer side lengths and $AB<AC$. Points $D$ and $E$ lie on segments $BC$ and $AC$, respectively, such that $AD=AE=AB$. Line $DE$ intersects $AB$ at $X$. Circles $BXD$ and $CED$ intersect for the second time at $Y \neq D$. Suppose that $Y$ lies on line $AD$. There is a unique such triangle with minimal perimeter. This triangle has side lengths $a=BC$, $b=CA$, and $c=AB$. Find the remainder when $abc$ is divided by $10^{5}$.",336,unknown
+26de63,"Define a function $f \colon \mathbb{Z}_{\geq 1} \to \mathbb{Z}_{\geq 1}$ by
+\begin{equation*}
+    f(n) = \sum_{i = 1}^n \sum_{j = 1}^n j^{1024} \left\lfloor\frac1j + \frac{n-i}{n}\right\rfloor.
+\end{equation*}
+Let $M=2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13$ and let $N = f{\left(M^{15}\right)} - f{\left(M^{15}-1\right)}$. Let $k$ be the largest non-negative integer such that $2^k$ divides $N$. What is the remainder when $2^k$ is divided by $5^7$?",32951,unknown
+424e18,"A tournament is held with $2^{20}$ runners each of which has a different running speed. In each race, two runners compete against each other with the faster runner always winning the race. The competition consists of $20$ rounds with each runner starting with a score of $0$. In each round, the runners are paired in such a way that in each pair, both runners have the same score at the beginning of the round. The winner of each race in the $i^{\text{th}}$ round receives $2^{20-i}$ points and the loser gets no points.
+
+At the end of the tournament, we rank the competitors according to their scores. Let $N$ denote the number of possible orderings of the competitors at the end of the tournament. Let $k$ be the largest positive integer such that $10^k$ divides $N$. What is the remainder when $k$ is divided by $10^{5}$?",21818,unknown
+42d360,"On a blackboard, Ken starts off by writing a positive integer $n$ and then applies the following move until he first reaches $1$. Given that the number on the board is $m$, he chooses a base $b$, where $2 \leq b \leq m$, and considers the unique base-$b$ representation of $m$,
+\begin{equation*}
+    m = \sum_{k = 0}^\infty a_k \cdot b^k
+\end{equation*}
+where $a_k$ are non-negative integers and $0 \leq a_k < b$ for each $k$. Ken then erases $m$ on the blackboard and replaces it with $\sum\limits_{k = 0}^\infty a_k$.
+
+Across all choices of $1 \leq n \leq 10^{10^5}$, the largest possible number of moves Ken could make is $M$. What is the remainder when $M$ is divided by $10^{5}$?",32193,unknown
+641659,"Let $ABC$ be a triangle with $AB \neq AC$, circumcircle $\Omega$, and incircle $\omega$. Let the contact points of $\omega$ with $BC$, $CA$, and $AB$ be $D$, $E$, and $F$, respectively. Let the circumcircle of $AFE$ meet $\Omega$ at $K$ and let the reflection of $K$ in $EF$ be $K'$. Let $N$ denote the foot of the perpendicular from $D$ to $EF$. The circle tangent to line $BN$ and passing through $B$ and $K$ intersects $BC$ again at $T \neq B$. 
+    
+Let sequence $(F_n)_{n \geq 0}$ be defined by $F_0 = 0$, $F_1 = 1$ and for $n \geq 2$, $F_n = F_{n-1} + F_{n-2}$. Call $ABC$ $n$\emph{-tastic} if $BD = F_n$, $CD = F_{n+1}$, and $KNK'B$ is cyclic. Across all $n$-tastic triangles, let $a_n$ denote the maximum possible value of $\frac{CT \cdot NB}{BT \cdot NE}$. Let $\alpha$ denote the smallest real number such that for all sufficiently large $n$, $a_{2n} < \alpha$. Given that $\alpha = p + \sqrt{q}$ for rationals $p$ and $q$, what is the remainder when $\left\lfloor p^{q^p} \right\rfloor$ is divided by $99991$?",57447,unknown
+86e8e5,"Let $n \geq 6$ be a positive integer. We call a positive integer $n$-Norwegian if it has three distinct positive divisors whose sum is equal to $n$. Let $f(n)$ denote the smallest $n$-Norwegian positive integer. Let $M=3^{2025!}$ and for a non-negative integer $c$ define 
+\begin{equation*}
+    g(c)=\frac{1}{2025!}\left\lfloor \frac{2025! f(M+c)}{M}\right\rfloor.
+\end{equation*}
+We can write 
+\begin{equation*}
+    g(0)+g(4M)+g(1848374)+g(10162574)+g(265710644)+g(44636594)=\frac{p}{q}
+\end{equation*}
+where $p$ and $q$ are coprime positive integers. What is the remainder when $p+q$ is divided by $99991$?",8687,unknown
+92ba6a,"Alice and Bob are each holding some integer number of sweets. Alice says to Bob: ``If we each added the number of sweets we're holding to our (positive integer) age, my answer would be double yours. If we took the product, then my answer would be four times yours.'' Bob replies: ``Why don't you give me five of your sweets because then both our sum and product would be equal.'' What is the product of Alice and Bob's ages?",50,unknown
+9c1c5f,"Let $f \colon \mathbb{Z}_{\geq 1} \to \mathbb{Z}_{\geq 1}$ be a function such that for all positive integers $m$ and $n$, 
+\begin{equation*}
+    f(m) + f(n) = f(m + n + mn).
+\end{equation*}
+Across all functions $f$ such that $f(n) \leq 1000$ for all $n \leq 1000$, how many different values can $f(2024)$ take?",580,unknown
+a295e9,"A $500 \times 500$ square is divided into $k$ rectangles, each having integer side lengths. Given that no two of these rectangles have the same perimeter, the largest possible value of $k$ is $\mathcal{K}$. What is the remainder when $k$ is divided by $10^{5}$?",520,unknown
+dd7f5e,"Let $\mathcal{F}$ be the set of functions $\alpha \colon \mathbb{Z}\to \mathbb{Z}$ for which there are only finitely many $n \in \mathbb{Z}$ such that $\alpha(n) \neq 0$. 
+
+For two functions $\alpha$ and $\beta$ in $\mathcal{F}$, define their product $\alpha\star\beta$ to be $\sum\limits_{n\in\mathbb{Z}} \alpha(n)\cdot \beta(n)$. Also, for $n\in\mathbb{Z}$, define a shift operator $S_n \colon \mathcal{F}\to \mathcal{F}$ by $S_n(\alpha)(t)=\alpha(t+n)$ for all $t \in \mathbb{Z}$.
+
+A function $\alpha \in \mathcal{F}$ is called \emph{shifty} if 
+\begin{itemize}
+    \item $\alpha(m)=0$ for all integers $m<0$ and $m>8$ and
+    \item There exists $\beta \in \mathcal{F}$ and integers $k \neq l$ such that for all $n \in \mathbb{Z}$
+    \begin{equation*}
+        S_n(\alpha)\star\beta =
+        \begin{cases}
+            1 & n \in \{k,l\} \\
+            0 & n \not \in \{k,l\}
+        \end{cases}
+        \; .
+    \end{equation*}
+\end{itemize}
+How many shifty functions are there in $\mathcal{F}$?",160,unknown

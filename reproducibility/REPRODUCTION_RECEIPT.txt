@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\juans\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\juans\Documents\GitHub\kaggle-aimo3-2026-1\writeup
+configfile: pytest.ini
+plugins: anyio-4.9.0, zarr-3.1.6
+collecting ... collected 17 items
+
+tests/test_bayesian_sqrt_inversion.py::test_plain_majority_picks_correct PASSED [  5%]
+tests/test_bayesian_sqrt_inversion.py::test_entropy_weighted_with_floor_picks_correct PASSED [ 11%]
+tests/test_bayesian_sqrt_inversion.py::test_sqrt_prior_plus_entropy_INVERTS_correct_majority PASSED [ 17%]
+tests/test_bayesian_sqrt_inversion.py::test_plain_sqrt_alone_on_uniform_entropy_is_anti_condorcet PASSED [ 23%]
+tests/test_bayesian_sqrt_inversion.py::test_condorcet_condition_documented PASSED [ 29%]
+tests/test_eagle3_moe_zero_tokens.py::test_trap_recognized_by_rule PASSED [ 35%]
+tests/test_eagle3_moe_zero_tokens.py::test_dense_architecture_escapes_trap PASSED [ 41%]
+tests/test_eagle3_moe_zero_tokens.py::test_non_mxfp4_quantization_escapes_trap PASSED [ 47%]
+tests/test_eagle3_moe_zero_tokens.py::test_no_speculative_model_escapes_trap PASSED [ 52%]
+tests/test_eagle3_moe_zero_tokens.py::test_newer_vllm_is_flagged_as_unknown PASSED [ 58%]
+tests/test_eagle3_moe_zero_tokens.py::test_documented_issue_references PASSED [ 64%]
+tests/test_eagle3_moe_zero_tokens.py::test_vllm_engine_returns_tokens SKIPPED [ 70%]
+tests/test_lora_mxfp4_collapse.py::test_synthetic_collapse_detected_for_small_delta PASSED [ 76%]
+tests/test_lora_mxfp4_collapse.py::test_synthetic_delta_survives_when_magnitude_large_enough PASSED [ 82%]
+tests/test_lora_mxfp4_collapse.py::test_huikang_style_adapter_magnitudes_collapse PASSED [ 88%]
+tests/test_lora_mxfp4_collapse.py::test_threshold_is_actionable PASSED   [ 94%]
+tests/test_lora_mxfp4_collapse.py::test_real_gpt_oss_lora_collapse SKIPPED [100%]
+
+======================== 15 passed, 2 skipped in 0.74s ========================

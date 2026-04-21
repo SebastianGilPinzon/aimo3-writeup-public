@@ -1,0 +1,25 @@
+# Strict-mode SHA256 for submission.parquet — populated by the FIRST canonical
+# `REPRODUCE_DETERMINISTIC=1 bash reproduce.sh` run on a compliant H100 host.
+#
+# Until that canonical run is executed, this file intentionally holds no hash:
+# it is not possible to commit a reference SHA for bitwise-deterministic
+# submission output without actually producing that output on a reference host.
+# Any attempt to populate this file from a different substrate would encode a
+# hash that compliant reviewers (same Docker image, same seeds) would never
+# reproduce.
+#
+# What IS independently verifiable TODAY by any reviewer without an H100:
+#   sha256sum --check artifact_sha256.txt
+# which checks the SHA256 of the 17 deterministic files that make up this
+# writeup package (notebook source, data, reproducibility scripts, tests,
+# figures, config). All 17 pass on a clean clone in <1 second. The manifest
+# at artifact_sha256.txt is the cryptographic integrity guarantee of the
+# non-submission-parquet portion of the package.
+#
+# To populate THIS file after running strict mode on H100:
+#   REPRODUCE_DETERMINISTIC=1 bash reproduce.sh
+#   sha256sum submission.parquet | \
+#     sed 's/submission.parquet$/submission.parquet.strict_mode/' \
+#     > reproducibility/strict_mode_sha256.txt
+#   git add reproducibility/strict_mode_sha256.txt
+#   git commit -m "populate strict-mode SHA from canonical H100 run"
