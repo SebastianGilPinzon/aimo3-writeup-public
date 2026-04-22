@@ -1,6 +1,6 @@
 # Three Substrate Traps on gpt-oss-120b-MXFP4 for AIMO3: A Reproducibility Package Accompanied by Sixteen Falsified Consensus Modifications
 
-**Author:** Juan Sebastian Gil Pinzon (Kaggle: `sebastiangil00`, team *Hail Mary*)
+**Author:** Juan Sebastian Gil Pinzon and Kimberley Duran (Kagglers: `sebastiangil00`, `kimberleyduran`; team *Hail Mary*)
 **Competition:** [AIMO Progress Prize 3](https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3)
 **Final result:** public 42/50, private 42/50; final rank 284
 **Submission:** [AIMO3 v7 - Winner Fork - Version 12](https://www.kaggle.com/code/sebastiangil00/aimo3-v7-winner-fork)
@@ -28,7 +28,7 @@ Each detection script returns a boolean verdict in under five minutes on a singl
 
 **Artifact 3: A reproduction specification and one-command script** (§3) that regenerates our final `submission.parquet` to within two-run seed tolerance on any H100 80GB. The specification pins the vLLM wheel SHA, the gpt-oss-120b weight commit, the Kaggle Docker image digest, a complete `pip freeze`, all prompts verbatim, and the decoding configuration. Our final submission's public and private leaderboard scores match at 42/50 — a single-realization parity consistent with Frieder's reported public–private gap distribution on this competition [18] (mean ≈2.3 pp, σ ≈3.1 pp), which we offer as an end-to-end reproducibility target rather than as evidence of a substrate ceiling.
 
-We **explicitly do not claim** 42–44/50 is the achievable ceiling on this substrate; at least three private-leaderboard teams exceeded 47/50, and their methods are not publicly disclosed at the time of writing. What we document is a **practitioner's plateau**: the failure envelope of a solo-competitor, inference-only effort that had full access to the public-consensus recipe and 22 days of H100 time to depart from it. We extrapolate tentatively, grounded in the training-heavy wins of Numina [3] and NemoSkills [4], that the path to >44/50 on this substrate likely requires training-data interventions which the quantization regime forecloses without access to full-precision weights.
+We **explicitly do not claim** 42–44/50 is the achievable ceiling on this substrate; at least three private-leaderboard teams exceeded 47/50, and their methods are not publicly disclosed at the time of writing. What we document is a **practitioner's plateau**: the failure envelope of a two-person, inference-only effort that had full access to the public-consensus recipe and 22 days of H100 time to depart from it. We extrapolate tentatively, grounded in the training-heavy wins of Numina [3] and NemoSkills [4], that the path to >44/50 on this substrate likely requires training-data interventions which the quantization regime forecloses without access to full-precision weights.
 
 **In one sentence:** this paper is a tool, not a story — three unit tests, sixteen pre-committed falsifications, and a one-command reproduction, assembled so the next AIMO4 entrant does not re-learn what we paid ≈180 H100-hours to learn.
 
@@ -54,7 +54,7 @@ The 80GB / 5h envelope tightly constrains the design space. Open-weight models a
 
 At least three teams exceeded 47/50 on the AIMO3 private leaderboard; their approaches are not publicly disclosed at the time of writing. The AIMO1 and AIMO2 competitions were each won by training-heavy pipelines: Numina [3] fine-tuned DeepSeekMath-7B on a 860K-problem synthetic dataset to win AIMO1, and NemoSkills [4] combined a TIR-trained generator with a separately-trained GenSelect selector to win AIMO2. Both approaches front-load the contribution in *training data and training protocol*, not in inference-time interventions. Against this prior art, the central empirical question we pursue is narrower than "how does one win AIMO3?":
 
-> **For a solo competitor restricted to inference-time modifications of the public-consensus recipe on the substrate of §1.2, which departures yield leaderboard improvements?**
+> **For a small team restricted to inference-time modifications of the public-consensus recipe on the substrate of §1.2, which departures yield leaderboard improvements?**
 
 Our answer, below, is that **none of the sixteen departures we tested did**. The best-performing configuration we found is the unmodified baseline. This is not evidence of a true substrate ceiling; it is evidence of a **practitioner's plateau** — the failure envelope of our own 22-day inference-only effort. Training-data interventions (foreclosed for us by the quantization regime, per §6.2) remain a plausible and likely path to higher scores, consistent with Numina and NemoSkills.
 
@@ -298,7 +298,7 @@ Baseline row is the control; the remaining **sixteen rows are the sixteen falsif
 
 ### 4.4 Negative interpretation
 
-The 16 falsifications do not imply no inference-time intervention can help on this substrate; they imply **no intervention within the design space we searched** helped. We did not test: symbolic verification (Lean/Coq assertion proofs), hand-curated problem-domain retrieval, multi-model ensembles with 3+ different architectures, or training-time interventions (except LoRA, falsified). The search was broad within "inference-only solo-competitor refinements of the public recipe"; it was narrow within the full space of mathematical-reasoning methods. §7 returns to this scope-of-claim.
+The 16 falsifications do not imply no inference-time intervention can help on this substrate; they imply **no intervention within the design space we searched** helped. We did not test: symbolic verification (Lean/Coq assertion proofs), hand-curated problem-domain retrieval, multi-model ensembles with 3+ different architectures, or training-time interventions (except LoRA, falsified). The search was broad within "inference-only refinements of the public recipe by a small team"; it was narrow within the full space of mathematical-reasoning methods. §7 returns to this scope-of-claim.
 
 ---
 
@@ -420,7 +420,7 @@ The three substrate traps we document below share three properties: (i) the unde
 
 ### 7.1 Scope of our claims
 
-1. **The "plateau" is practitioner-scoped.** Our empirical failure envelope is 42–44/50 on the §1.2 substrate, for a solo competitor limited to inference-time interventions over 22 days. At least three private teams scored ≥47, and we have no evidence that our envelope is general.
+1. **The "plateau" is practitioner-scoped.** Our empirical failure envelope is 42–44/50 on the §1.2 substrate, for a two-person team limited to inference-time interventions over 22 days. At least three private teams scored ≥47, and we have no evidence that our envelope is general.
 
 2. **Validation-to-leaderboard transportability is imperfect.** Our val-199 is not a random sample of the AIMO3 public or private problem distribution; it is an opportunistic aggregation of reference + Galois + sample-generated problems (Appendix A3). The power analysis in §1.4 is conditional on val-199 being a reasonable proxy, which we cannot formally verify.
 
