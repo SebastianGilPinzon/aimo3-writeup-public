@@ -1,0 +1,44 @@
+AIMO3 Writeup Prize — Rebuttal-Phase Frozen Reference
+======================================================
+
+Tag:        v1.0-rebuttal
+Release:    2026-05-13 (Kaggle Writeup Prize rebuttal phase)
+Repo:       https://github.com/SebastianGilPinzon/aimo3-writeup-public
+Branch:     main (tag points at the commit referenced from the published
+            Kaggle writeup during the rebuttal phase)
+Kaggle:     https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3/writeups/a-practitioners-plateau-on-gpt-oss-120b-mxfp4
+
+Purpose
+-------
+This tag pins the exact state of the reproducibility package at the moment
+of the Writeup-Prize rebuttal submission. Reviewers can cite this tag as a
+permanent reference: any future drift on the main branch does not affect
+the artifact under review.
+
+To check out the frozen state
+-----------------------------
+    git clone https://github.com/SebastianGilPinzon/aimo3-writeup-public
+    cd aimo3-writeup-public
+    git checkout v1.0-rebuttal
+    git rev-parse v1.0-rebuttal     # prints the exact 40-char commit SHA
+
+What changed between the original submission and this tag
+---------------------------------------------------------
+- main.md: factual update — public 42 / private 39.5 (post-deadline rerun);
+  Seungjun Lee (45/50 public, 44 private) cited as external corroboration
+  of trap-avoidance; CJT reference tightened to Boland-1989 conditionally-
+  independent form; MXFP4 SNR threshold (2^-4) and observed huikang ratio
+  (2^-6) reconciled into one consistent statement; EAGLE-3 failure-surface
+  description aligned to "zero-or-degenerate" wording from §6.1.
+- reproducibility/model_weights.sha256: populated with the 15 real
+  safetensors SHA-256 hashes from unsloth/gpt-oss-120b (HF mirror of the
+  OpenAI release used on Kaggle as danielhanchen/gpt-oss-120b/Transformers/default/1).
+- reproducibility/COMMIT.txt: this file (new).
+- Open-in-Colab badge on main.md page 1, pointing to this tag.
+
+What did NOT change
+-------------------
+- Substrate trap claims (§6.1 / §6.2 / §6.3) and their detection scripts.
+- The sixteen-row falsification catalog (§4) and its BH-corrected aggregate.
+- The Mode A / Mode B reproduction recipe and verify.py mechanics.
+- Methodology, scope of claims, and explicit non-contributions.
