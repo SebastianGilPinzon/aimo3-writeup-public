@@ -121,6 +121,10 @@ Our internal validation set combines three sources:
 
 Total after filtering: 10 + 41 + 148 = **199 problems**. Stored in `data/val_199.csv`.
 
+**Ground-truth validation procedure.** For (1) the reference set, ground truths are published by the organizers. For (2) bigval50, each candidate ground truth was cross-checked against at least one publicly-disclosed participant solution and verified for AIMO3 rule compliance (integer in [0, 99999]); the 9 OOD items dropped during this pass are listed in `data/bigval50_excluded.csv`. For (3) Galois-clean, ground truths were extracted from the upstream Galois corpus and re-verified via two independent CAS/LLM passes (`sympy` symbolic + `gpt-oss-120b` boxed-answer extraction at temperature 0) and items where the two passes disagreed were excluded.
+
+**Math Corpus Prize datasets — not used.** We deliberately did **not** incorporate problems from the Math Corpus Prize submissions referenced by other contestants (e.g., the public corpora released closer to the deadline). They post-dated our experimental cutoff (2026-04-08) and we wanted to avoid the leakage risk of training-or-validating on data co-curated by other AIMO3 participants. This is a real coverage gap and we flag it explicitly.
+
 **Validation limitation.** The val-199 distribution is not a uniform random sample of the AIMO3 public or private split. It is opportunistically aggregated. Per-problem effect sizes estimated on val-199 are therefore conditional on this sample; the McNemar paired-test MDE of ≈3–4 pp at α=0.05 assumes val-199 is a sufficient proxy, which we cannot formally verify. We mitigate this by cross-checking with the reference set (n=10, used for distributional verification in `verify.py --mode stochastic`) and the public leaderboard (n=50, single realization).
 
 ---
